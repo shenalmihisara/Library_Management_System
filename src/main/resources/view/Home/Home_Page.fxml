@@ -30,12 +30,12 @@
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <VBox layoutX="298.0" layoutY="115.0" prefHeight="119.0" prefWidth="203.0" spacing="12.0" styleClass="card" stylesheets="@../css/style.css" AnchorPane.leftAnchor="298.0" AnchorPane.rightAnchor="406.79999999999995">
+      <VBox layoutX="279.0" layoutY="301.0" prefHeight="119.0" prefWidth="241.0" spacing="12.0" styleClass="card" stylesheets="@../css/style.css">
          <padding>
             <Insets top="20.0" />
          </padding>
          <children>
-            <Label text="Total Books.">
+            <Label prefHeight="22.0" prefWidth="190.0" text="Currently Borrowed Books">
                <font>
                   <Font name="System Bold Italic" size="15.0" />
                </font>
@@ -47,17 +47,51 @@
             </Label>
          </children>
       </VBox>
-      <VBox layoutX="573.0" layoutY="115.0" prefHeight="119.0" prefWidth="203.0" spacing="12.0" styleClass="card" stylesheets="@../css/style.css" AnchorPane.rightAnchor="130.79999999999995">
+      <VBox layoutX="598.0" layoutY="301.0" prefHeight="119.0" prefWidth="241.0" spacing="12.0" styleClass="card" stylesheets="@../css/style.css">
          <padding>
             <Insets top="20.0" />
          </padding>
          <children>
-            <Label text="Total Members">
+            <Label prefHeight="22.0" prefWidth="190.0" text="Overdue Books">
                <font>
                   <Font name="System Bold Italic" size="15.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="100">
+            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" style="-fx-text-alignment: center;" text="10" textAlignment="CENTER">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="598.0" layoutY="94.0" prefHeight="119.0" prefWidth="241.0" spacing="12.0" styleClass="card" stylesheets="@../css/style.css">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+         <children>
+            <Label prefHeight="22.0" prefWidth="190.0" text="Total Members">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" style="-fx-text-alignment: center;" text="100" textAlignment="CENTER">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="279.0" layoutY="94.0" prefHeight="119.0" prefWidth="241.0" spacing="12.0" styleClass="card" stylesheets="@../css/style.css">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+         <children>
+            <Label prefHeight="22.0" prefWidth="190.0" text="Total Books">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" style="-fx-text-alignment: center;" text="500" textAlignment="CENTER">
                <font>
                   <Font size="23.0" />
                </font>

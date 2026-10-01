@@ -3,12 +3,15 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="722.0" prefWidth="907.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Members.MembersPageController">
+<AnchorPane prefHeight="722.0" prefWidth="907.0" style="-fx-background-color: #F8F5EE;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Members.MembersPageController">
    <children>
       <VBox prefHeight="200.0" prefWidth="220.0" spacing="10.0" styleClass="sidebar" stylesheets="@../css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="687.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -26,10 +29,27 @@
             <Insets top="20.0" />
          </padding>
       </VBox>
-      <Label layoutX="506.0" layoutY="52.0" text="Members">
+      <Label alignment="CENTER" layoutX="506.0" layoutY="52.0" text="Library Members" textFill="#2563eb" AnchorPane.bottomAnchor="627.6" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="255.0" AnchorPane.topAnchor="24.0">
          <font>
-            <Font size="34.0" />
+            <Font name="System Bold" size="28.0" />
          </font>
       </Label>
+      <HBox layoutX="234.0" layoutY="94.0" prefHeight="41.0" prefWidth="302.0">
+         <children>
+            <TextField fx:id="txtSearchMember" prefHeight="41.0" prefWidth="211.0" promptText="Search Member" styleClass="search-field" stylesheets="@../css/style.css" />
+            <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="39.0" prefWidth="96.0" styleClass="search-button" stylesheets="@../css/style.css" text="Search" />
+         </children>
+      </HBox>
+      <Button fx:id="btnAddMember" layoutX="727.0" layoutY="94.0" mnemonicParsing="false" onAction="#btnAddMemberOnAction" prefHeight="41.0" prefWidth="166.0" styleClass="add-member-button" stylesheets="@../css/style.css" text="+  Add Members" />
+      <TableView layoutX="227.0" layoutY="166.0" prefHeight="542.0" prefWidth="666.0" styleClass="members-table" stylesheets="@../css/style.css">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Member Id" />
+          <TableColumn prefWidth="134.39996337890625" text="Name" />
+            <TableColumn prefWidth="207.99996948242188" text="Email" />
+            <TableColumn minWidth="0.0" prefWidth="124.79998779296875" text="Phone" />
+            <TableColumn prefWidth="124.800048828125" text="Action" />
+            <TableColumn prefWidth="75.0" text="Member Id" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

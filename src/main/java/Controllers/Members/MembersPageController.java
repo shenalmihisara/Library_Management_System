@@ -80,4 +80,19 @@ public class MembersPageController {
         errorStage.close();
     }
 
+    public void btnSearchOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnAddMemberOnAction(ActionEvent actionEvent) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Members/Add_Members_Page.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+
+        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        errorStage.close();
+    }
 }
