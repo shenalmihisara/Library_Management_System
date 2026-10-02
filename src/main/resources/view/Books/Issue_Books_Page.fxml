@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Controllers.Books.IssueBooksPageController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="426.0" prefWidth="298.0" styleClass="form-field" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.IssueBooksPageController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="72.0" layoutY="14.0" styleClass="form-heading" stylesheets="@../css/style.css" text="Issue Books">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="92.0" styleClass="form-label" stylesheets="@../css/style.css" text="Select Member">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="22.0" layoutY="119.0" prefHeight="28.0" prefWidth="218.0" stylesheets="@../css/style.css" />
+      <Label layoutX="22.0" layoutY="147.0" styleClass="form-label" stylesheets="@../css/style.css" text="Select Books" AnchorPane.topAnchor="147.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="214.0" styleClass="form-label" stylesheets="@../css/style.css" text="Issue Date" AnchorPane.topAnchor="214.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="290.0" styleClass="form-label" stylesheets="@../css/style.css" text="Due Date">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="22.0" layoutY="186.0" prefHeight="28.0" prefWidth="218.0" stylesheets="@../css/style.css" />
+      <DatePicker layoutX="18.0" layoutY="255.0" />
+      <DatePicker layoutX="18.0" layoutY="319.0" />
+      <Button layoutX="172.0" layoutY="378.0" mnemonicParsing="false" styleClass="search-button" stylesheets="@../css/style.css" text="Issue Books" />
+      <Button fx:id="btnIssueBooksCancle" graphicTextGap="2.0" layoutX="82.0" layoutY="378.0" mnemonicParsing="false" onAction="#btnIssueBooksCancleOnAction" prefHeight="39.0" prefWidth="83.0" style="-fx-background-color: #ff0000;" styleClass="search-button" stylesheets="@../css/style.css" text="Cancle" textFill="WHITE" />
+   </children>
 </AnchorPane>
