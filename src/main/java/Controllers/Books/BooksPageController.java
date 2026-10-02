@@ -80,4 +80,42 @@ public class BooksPageController {
         errorStage.close();
     }
 
+    public void btnReturnBooksDetailOnAction(ActionEvent actionEvent) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Books/Return_Books_Page.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+
+        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        errorStage.close();
+    }
+
+    public void btnBookHistoryDetailOnAction(ActionEvent actionEvent) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Books/Books_History_Page.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+
+        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        errorStage.close();
+    }
+
+    public void btnIssueBooksDetailOnAction(ActionEvent actionEvent) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Books/Issue_Books_Page.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+
+        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        errorStage.close();
+    }
 }

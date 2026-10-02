@@ -243,3 +243,14 @@
 
     -fx-cursor: hand;
 }
+
+.card-header {
+    -fx-background-color: #f5f5f5;
+    -fx-padding: 10px;
+}
+
+.card-header .label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
