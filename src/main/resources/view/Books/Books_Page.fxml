@@ -63,7 +63,7 @@
             </Label>
             <Label prefHeight="26.0" prefWidth="125.0" text="History about" />
             <Label layoutX="31.0" layoutY="84.0" prefHeight="26.0" prefWidth="125.0" text="Library books" />
-            <Button fx:id="btnBookHistoryDetail" mnemonicParsing="false" onAction="#btnBookHistoryDetailOnAction" text="Details">
+            <Button fx:id="btnBookHistoryDetail" mnemonicParsing="false" onAction="#btnBookHistoryDetailOnAction" prefHeight="28.0" prefWidth="55.0" text="Details">
                <VBox.margin>
                   <Insets left="68.0" top="5.0" />
                </VBox.margin>
@@ -84,7 +84,7 @@
             <Label layoutX="31.0" layoutY="73.0" text="Books" />
             <Label layoutX="31.0" layoutY="84.0" text="Issue Date" />
             <Label layoutX="31.0" layoutY="120.0" text="Due Date" />
-            <Button fx:id="btnIssueBooksDetail" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#btnIssueBooksDetailOnAction" style="-fx-alignment: CENTER;" text="Details">
+            <Button fx:id="btnIssueBooksDetail" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#btnIssueBooksDetailOnAction" style="-fx-alignment: CENTER;" text="Details" textFill="#260b0b">
                <VBox.margin>
                   <Insets left="67.0" top="5.0" />
                </VBox.margin>

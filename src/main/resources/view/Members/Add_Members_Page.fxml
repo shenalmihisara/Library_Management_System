@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="576.0" prefWidth="469.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Members.AddMembersPageController">
    <children>
       <VBox layoutX="184.0" layoutY="88.0" prefHeight="576.0" prefWidth="469.0" styleClass="add-member-form" stylesheets="@../css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -24,15 +23,15 @@
                </font>
             </Label>
             <Label maxHeight="1.7976931348623157E308" prefHeight="37.0" prefWidth="112.0" styleClass="form-label" stylesheets="@../css/style.css" text="Member Id" />
-            <TextField promptText="C001" styleClass="form-field" stylesheets="@../css/style.css" />
+            <TextField fx:id="txtId" promptText="C001" styleClass="form-field" stylesheets="@../css/style.css" />
             <Label layoutX="41.0" layoutY="104.0" maxHeight="1.7976931348623157E308" prefHeight="41.0" prefWidth="78.0" styleClass="form-label" stylesheets="@../css/style.css" text="Full Name" />
-            <TextField layoutX="41.0" layoutY="122.0" promptText="Your full name" styleClass="form-field" stylesheets="@../css/style.css" />
+            <TextField fx:id="txtName" layoutX="41.0" layoutY="122.0" promptText="Your full name" styleClass="form-field" stylesheets="@../css/style.css" />
             <Label layoutX="41.0" layoutY="104.0" maxHeight="1.7976931348623157E308" prefHeight="41.0" prefWidth="119.0" styleClass="form-label" stylesheets="@../css/style.css" text="Email" />
-            <TextField layoutX="41.0" layoutY="166.0" promptText="example@gmail.com" styleClass="form-field" stylesheets="@../css/style.css" />
+            <TextField fx:id="txtEmail" layoutX="41.0" layoutY="166.0" promptText="example@gmail.com" styleClass="form-field" stylesheets="@../css/style.css" />
             <Label layoutX="41.0" layoutY="192.0" maxHeight="1.7976931348623157E308" prefHeight="41.0" prefWidth="109.0" styleClass="form-label" stylesheets="@../css/style.css" text="Phone Number" />
-            <TextField layoutX="41.0" layoutY="210.0" promptText="07xx xxx xxx" styleClass="form-field" stylesheets="@../css/style.css" />
+            <TextField fx:id="txtPhoneNumber" layoutX="41.0" layoutY="210.0" promptText="07xx xxx xxx" styleClass="form-field" stylesheets="@../css/style.css" />
             <Label layoutX="41.0" layoutY="236.0" maxHeight="1.7976931348623157E308" prefHeight="41.0" prefWidth="82.0" styleClass="form-label" stylesheets="@../css/style.css" text="Address" />
-            <TextField layoutX="41.0" layoutY="254.0" promptText="Your Address" styleClass="form-field" stylesheets="@../css/style.css" />
+            <TextField fx:id="txtAddress" layoutX="41.0" layoutY="254.0" promptText="Your Address" styleClass="form-field" stylesheets="@../css/style.css" />
             <Button fx:id="btnMemberRegister" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnMemberRegisterOnAction" styleClass="add-button" stylesheets="@../css/style.css" text="Register Member">
                <VBox.margin>
                   <Insets top="30.0" />
