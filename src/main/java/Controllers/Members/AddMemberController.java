@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class AddMemberController {
-    Connection connection = dbConnection.getConnection();
+    Connection connection = dbConnection.getInstance().getConnection();
 
     public void addMembers(String Id, String Name, String Address, String Email, String phonenumber) {
         String SQL = "INSERT INTO members(member_id, member_name, email, phone_number, address) VALUE(?, ?, ?, ?, ?)";

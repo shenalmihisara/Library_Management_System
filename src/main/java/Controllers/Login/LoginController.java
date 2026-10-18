@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class LoginController {
-    Connection connection = dbConnection.getConnection();
+    Connection connection = dbConnection.getInstance().getConnection();
 
     public boolean CheckUserNameAndPassword(String username, String password) {
         String SQL = "SELECT * FROM users";
