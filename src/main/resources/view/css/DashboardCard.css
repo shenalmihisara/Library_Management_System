@@ -1,0 +1,62 @@
+```css
+/* Main card */
+.card {
+    -fx-background-color: #0B1930;
+    -fx-background-radius: 12px;
+    -fx-border-color: #1E3354;
+    -fx-border-width: 1px;
+    -fx-border-radius: 12px;
+    -fx-padding: 20px;
+    -fx-spacing: 10px;
+}
+
+/* Card title */
+.card-title {
+    -fx-text-fill: #F8FAFC;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* Card description */
+.card-description {
+    -fx-text-fill: #94A3B8;
+    -fx-font-size: 12px;
+}
+
+/* Card number / main value */
+.card-value {
+    -fx-text-fill: #60A5FA;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+/* Card hover effect */
+.card:hover {
+    -fx-background-color: #102440;
+    -fx-border-color: #2563EB;
+}
+
+/* Blue accent card */
+.card-primary {
+    -fx-background-color: #163A70;
+    -fx-background-radius: 12px;
+    -fx-border-color: #2563EB;
+    -fx-border-radius: 12px;
+    -fx-border-width: 1px;
+    -fx-padding: 20px;
+}
+
+/* Primary card text */
+.card-primary .card-title,
+.card-primary .card-description,
+.card-primary .card-value {
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Card icon background */
+.card-icon {
+    -fx-background-color: #122744;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px;
+}
+```

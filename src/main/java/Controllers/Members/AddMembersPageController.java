@@ -43,4 +43,24 @@ public class AddMembersPageController {
     public void btnCancleMemberFormOnAction(ActionEvent actionEvent) {
         SceanManager.switchPage("/view/Members/Members_page.fxml");
     }
+
+    public void btnAddMemberOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Members/Add_Members_Page.fxml");
+    }
+
+    public void btnHomeOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Home/Home_Page.fxml");
+    }
+
+    public void btnMemberOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Members/Members_page.fxml");
+    }
+
+    public void btnBooksOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Books/Books_Page.fxml");
+    }
+
+    public void btnLogOutOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Login/Login_page.fxml");
+    }
 }

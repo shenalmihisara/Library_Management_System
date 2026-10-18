@@ -45,4 +45,5 @@ public class HomePageController {
         SceanManager.switchPage("/view/Members/Members_page.fxml");
     }
 
+    public void btnAddMemberOnAction(ActionEvent actionEvent) { SceanManager.switchPage("/view/Members/Add_Members_Page.fxml");}
 }

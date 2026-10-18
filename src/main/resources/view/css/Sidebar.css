@@ -1,0 +1,80 @@
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    -fx-background-color: #163A70;
+    -fx-padding: 25px 15px;
+    -fx-spacing: 12px;
+
+    /* Consistent sidebar width */
+    -fx-pref-width: 220px;
+    -fx-min-width: 220px;
+    -fx-max-width: 220px;
+
+    /* Fill available height */
+    -fx-max-height: Infinity;
+}
+
+/* ===== SIDEBAR LOGO / TITLE ===== */
+.sidebar-title {
+    -fx-text-fill: #F1F5F9;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-wrap-text: true;
+}
+
+/* ===== SIDEBAR MENU BUTTONS ===== */
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #94A3B8;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 13px 16px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-cursor: hand;
+    -fx-max-width: Infinity;
+}
+
+/* ===== HOVER EFFECT ===== */
+.sidebar-button:hover {
+    -fx-background-color: #151F32;
+    -fx-text-fill: #F1F5F9;
+}
+
+/* ===== ACTIVE MENU BUTTON ===== */
+.sidebar-button-active {
+    -fx-background-color: #2563EB;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+
+/* ===== ACTIVE BUTTON HOVER ===== */
+.sidebar-button-active:hover {
+    -fx-background-color: #3B82F6;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* ===== SIDEBAR SEPARATOR ===== */
+.sidebar .separator .line {
+    -fx-border-color: #29364B;
+    -fx-border-width: 1px 0 0 0;
+}
+
+/* ===== LOGOUT BUTTON ===== */
+.sidebar-logout {
+    -fx-background-color: transparent;
+    -fx-text-fill: #F87171;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 13px 16px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-max-width: Infinity;
+}
+
+.sidebar-logout:hover {
+    -fx-background-color: #351C2A;
+    -fx-text-fill: #FCA5A5;
+}
