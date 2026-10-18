@@ -106,4 +106,8 @@ public class MembersPageController implements Initializable {
         initializeColumns();
         loadMember();
     }
+
+    public void btnAddMemberSidebarOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Members/Add_Members_Page.fxml");
+    }
 }

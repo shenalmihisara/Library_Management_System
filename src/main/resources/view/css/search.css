@@ -1,0 +1,63 @@
+/* Search Bar */
+.search-field {
+    -fx-background-color: #0B1930;
+    -fx-text-fill: #F8FAFC;
+    -fx-prompt-text-fill: #64748B;
+
+    -fx-border-color: #294466;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+
+    -fx-padding: 10px 14px;
+    -fx-font-size: 13px;
+
+    -fx-pref-height: 40px;
+    -fx-min-height: 40px;
+    -fx-max-width: Infinity;
+}
+
+.search-field:focused {
+    -fx-background-color: #081A35;
+    -fx-border-color: #2563EB;
+}
+
+/* Search Button */
+.search-button {
+    -fx-background-color: #2563EB;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-padding: 10px 20px;
+
+    -fx-pref-height: 40px;
+    -fx-cursor: hand;
+}
+
+.search-button:hover {
+    -fx-background-color: #1D4ED8;
+}
+
+.search-button:pressed {
+    -fx-background-color: #1E40AF;
+}
+
+/* Clear Search Button (optional) */
+.clear-search-button {
+    -fx-background-color: #122744;
+    -fx-text-fill: #CBD5E1;
+    -fx-border-color: #294466;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+
+    -fx-padding: 10px 16px;
+    -fx-cursor: hand;
+}
+
+.clear-search-button:hover {
+    -fx-background-color: #163A70;
+    -fx-text-fill: #FFFFFF;
+}
