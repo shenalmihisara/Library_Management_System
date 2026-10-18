@@ -2,6 +2,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import scean.SceanManager;
 
 public class starter extends Application {
     public static void main(String[] args) { launch();
@@ -10,7 +11,7 @@ public class starter extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Login/Login_page.fxml"))));
-        stage.show();
+        SceanManager.setStage(stage);
+        SceanManager.switchPage("/view/Login/Login_page.fxml");
     }
 }

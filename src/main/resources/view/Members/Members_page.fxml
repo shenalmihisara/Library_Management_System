@@ -43,10 +43,10 @@
       <Button fx:id="btnAddMember" layoutX="727.0" layoutY="94.0" mnemonicParsing="false" onAction="#btnAddMemberOnAction" prefHeight="41.0" prefWidth="166.0" styleClass="add-member-button" stylesheets="@../css/style.css" text="+  Add Members" />
       <TableView layoutX="227.0" layoutY="166.0" prefHeight="542.0" prefWidth="666.0" styleClass="members-table" stylesheets="@../css/style.css">
         <columns>
-          <TableColumn prefWidth="75.0" text="Member Id" />
-          <TableColumn prefWidth="134.39996337890625" text="Name" />
-            <TableColumn prefWidth="207.99996948242188" text="Email" />
-            <TableColumn minWidth="0.0" prefWidth="124.79998779296875" text="Phone" />
+          <TableColumn fx:id="colMemberId" prefWidth="75.0" text="Member Id" />
+          <TableColumn fx:id="colMemberName" prefWidth="134.39996337890625" text="Name" />
+            <TableColumn fx:id="colMemberEmail" prefWidth="207.99996948242188" text="Email" />
+            <TableColumn fx:id="colMemberPhoneNum" minWidth="0.0" prefWidth="124.79998779296875" text="Phone" />
             <TableColumn prefWidth="124.800048828125" text="Action" />
             <TableColumn prefWidth="75.0" text="Member Id" />
         </columns>

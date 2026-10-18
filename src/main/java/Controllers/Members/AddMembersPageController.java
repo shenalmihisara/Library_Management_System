@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import scean.SceanManager;
 
 import java.io.IOException;
 
@@ -40,14 +41,6 @@ public class AddMembersPageController {
     }
 
     public void btnCancleMemberFormOnAction(ActionEvent actionEvent) {
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Members/Members_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceanManager.switchPage("/view/Members/Members_page.fxml");
     }
 }
