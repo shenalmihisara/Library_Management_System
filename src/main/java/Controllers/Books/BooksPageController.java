@@ -56,4 +56,11 @@ public class BooksPageController {
     public void btnIssueBooksDetailOnAction(ActionEvent actionEvent) {
         SceanManager.switchPage("/view/Books/Issue_Books_Page.fxml");
     }
+
+    public void btnAddMemberSidebarOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Members/Add_Members_Page.fxml");
+    }
+
+    public void btnAddBooksOnAction(ActionEvent actionEvent) {
+    }
 }
