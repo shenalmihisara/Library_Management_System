@@ -1,17 +1,44 @@
 package Controllers.Books;
 
+import Controllers.Members.MemberController;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 import scean.SceanManager;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.Map;
+import java.util.ResourceBundle;
 
-public class BooksPageController {
+public class BooksPageController implements Initializable {
+
+    BookController bookController = new BookController();
+
+    @FXML
+    public TableView<Map<String, String>>tableBooks;
+
+    @FXML
+    public TableColumn<Map<String, String>, String>colBookId;
+
+    @FXML
+    public TableColumn<Map<String, String>, String>colBookName;
+
+    @FXML
+    public TableColumn<Map<String, String>, String>colBookAuthor;
+
+    @FXML
+    public TableColumn<Map<String, String>, String>colRate;
 
     @FXML
     private Button btnBooks;
@@ -24,6 +51,8 @@ public class BooksPageController {
 
     @FXML
     private Button btnMember;
+
+    private ObservableList<Map<String, String>> masterBookList = FXCollections.observableArrayList();
 
     @FXML
     void btnBooksOnAction(ActionEvent event) {
@@ -62,5 +91,26 @@ public class BooksPageController {
     }
 
     public void btnAddBooksOnAction(ActionEvent actionEvent) {
+    }
+
+    public void initiableColumns(){
+        colBookId.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("book_id","")));
+        colBookName.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("book_name", "")));
+        colBookAuthor.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("book_author", "")));
+        colRate.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("rate","")));
+
+    }
+
+    public void loadBooks(){
+        ObservableList<Map<String, String>> bookFromDB = bookController.getAllBooks();
+        masterBookList.setAll(bookFromDB);
+        tableBooks.setItems(masterBookList);
+    }
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        initiableColumns();
+        loadBooks();
     }
 }
