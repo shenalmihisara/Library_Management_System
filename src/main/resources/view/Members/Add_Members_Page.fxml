@@ -42,7 +42,7 @@
                      </VBox.margin>
                   </Line>
                   <Button fx:id="btnBooks" mnemonicParsing="false" onAction="#btnBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Books" />
-                  <Button mnemonicParsing="false" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add books" />
+                  <Button fx:id="btnAddBooks" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add Books" />
                   <Line endX="100.0" layoutX="126.0" layoutY="279.0" scaleY="3.0" startX="-127.0">
                      <VBox.margin>
                         <Insets left="-18.0" />

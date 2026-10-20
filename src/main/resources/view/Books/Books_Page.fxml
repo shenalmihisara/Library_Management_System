@@ -43,7 +43,7 @@
                </VBox.margin>
             </Line>
             <Button fx:id="btnBooks" layoutX="10.0" layoutY="94.0" mnemonicParsing="false" onAction="#btnBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Books" />
-            <Button mnemonicParsing="false" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add Books" />
+            <Button fx:id="btnAddBooks" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add Books" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
@@ -75,7 +75,7 @@
             <String fx:value="scroll-bar" />
          </styleClass>
       </TableView>
-      <Button fx:id="btnAddBooks" layoutX="756.0" layoutY="137.0" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="add-member-button" stylesheets="@../css/BooksPage.css" text="+ Add books" />
+      <Button layoutX="756.0" layoutY="137.0" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="add-member-button" stylesheets="@../css/BooksPage.css" text="+ Add books" />
       <TextField layoutX="246.0" layoutY="137.0" promptText="Search Books" styleClass="search-bar" stylesheets="@../css/BooksPage.css" />
       <Button layoutX="434.0" layoutY="138.0" mnemonicParsing="false" styleClass="button-primary" stylesheets="@../css/BooksPage.css" text="Search" />
    </children>

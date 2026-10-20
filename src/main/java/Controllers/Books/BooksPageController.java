@@ -91,6 +91,7 @@ public class BooksPageController implements Initializable {
     }
 
     public void btnAddBooksOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Books/Add_Books_Page.fxml");
     }
 
     public void initiableColumns(){

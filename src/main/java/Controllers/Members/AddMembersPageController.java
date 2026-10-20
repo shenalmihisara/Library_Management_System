@@ -63,4 +63,8 @@ public class AddMembersPageController {
     public void btnLogOutOnAction(ActionEvent actionEvent) {
         SceanManager.switchPage("/view/Login/Login_page.fxml");
     }
+
+    public void btnAddBooksOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Books/Add_Books_Page.fxml");
+    }
 }
