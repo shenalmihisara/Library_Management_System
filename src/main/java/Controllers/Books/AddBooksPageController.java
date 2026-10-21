@@ -1,13 +1,21 @@
 package Controllers.Books;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import scean.SceanManager;
 
-public class AddBooksPageController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
+public class AddBooksPageController implements Initializable {
+
+    public ComboBox comboBoxBookType;
     AddBooksController addBooksController = new AddBooksController();
 
     @FXML
@@ -88,10 +96,23 @@ public class AddBooksPageController {
                 txtBookId.getText(),
                 txtBookName.getText(),
                 txtBookAuthor.getText(),
-                txtRate.getText()
+                txtRate.getText(),
+                comboBoxBookType.getValue().toString()
         );
     }
 
     public void comboBoxBookTypeOnActon(ActionEvent actionEvent) {
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        ObservableList<String> cmbList = FXCollections.observableArrayList();
+        cmbList.add("Adventure");
+        cmbList.add("Love Story");
+        cmbList.add("18+");
+        cmbList.add("Childrens Literature");
+        cmbList.add("Fantasy");
+
+        comboBoxBookType.setItems(cmbList);
     }
 }
