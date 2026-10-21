@@ -15,8 +15,10 @@ import java.util.ResourceBundle;
 
 public class AddBooksPageController implements Initializable {
 
-    public ComboBox comboBoxBookType;
     AddBooksController addBooksController = new AddBooksController();
+
+    @FXML
+    public ComboBox comboBoxBookType;
 
     @FXML
     private Button btnAddBooks;
@@ -114,5 +116,9 @@ public class AddBooksPageController implements Initializable {
         cmbList.add("Fantasy");
 
         comboBoxBookType.setItems(cmbList);
+    }
+
+    public void btnDeleteMemberOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Members/Delete_Member_page.fxml");
     }
 }

@@ -48,4 +48,6 @@ public class HomePageController {
     public void btnAddMemberOnAction(ActionEvent actionEvent) { SceanManager.switchPage("/view/Members/Add_Members_Page.fxml");}
 
     public void btnAddBooksOnAction(ActionEvent actionEvent) { SceanManager.switchPage("/view/Books/Add_Books_Page.fxml"); }
+
+    public void btnDeleteMemberOnAction(ActionEvent actionEvent) { SceanManager.switchPage("/view/Members/Delete_Member_page.fxml" );}
 }

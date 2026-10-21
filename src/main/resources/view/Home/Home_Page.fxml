@@ -31,6 +31,7 @@
             </Line>
             <Button fx:id="btnMember" layoutX="10.0" layoutY="28.0" mnemonicParsing="false" onAction="#btnMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/style.css" text="Members" />
             <Button fx:id="btnAddMember" mnemonicParsing="false" onAction="#btnAddMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add Member" />
+            <Button fx:id="btnDeleteMember" mnemonicParsing="false" onAction="#btnDeleteMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Delete Member" />
             <Line endX="100.0" layoutX="126.0" layoutY="467.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />

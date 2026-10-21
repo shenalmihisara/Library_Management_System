@@ -29,6 +29,7 @@
             </Line>
             <Button fx:id="btnMember" mnemonicParsing="false" onAction="#btnMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Member" />
             <Button fx:id="btnAddMember" mnemonicParsing="false" onAction="#btnAddMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add Member" />
+            <Button fx:id="btnDeleteMember" mnemonicParsing="false" onAction="#btnDeleteMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Delete Member" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
@@ -115,7 +116,7 @@
                   <Insets bottom="8.0" left="12.0" />
                </VBox.margin>
             </TextField>
-            <Label layoutX="31.0" layoutY="316.0" styleClass="field-label" stylesheets="@../css/AddBookPage.css" text="Rate" textFill="#ecebeb">
+            <Label layoutX="31.0" layoutY="316.0" styleClass="field-label" stylesheets="@../css/AddBookPage.css" text="Book Type" textFill="#ecebeb">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
