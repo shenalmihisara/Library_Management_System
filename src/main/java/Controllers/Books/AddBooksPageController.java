@@ -92,4 +92,6 @@ public class AddBooksPageController {
         );
     }
 
+    public void comboBoxBookTypeOnActon(ActionEvent actionEvent) {
+    }
 }
