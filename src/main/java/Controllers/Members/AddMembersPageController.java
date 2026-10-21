@@ -38,6 +38,12 @@ public class AddMembersPageController {
                 txtEmail.getText(),
                 txtPhoneNumber.getText()
         );
+
+        txtId.clear();
+        txtName.clear();
+        txtAddress.clear();
+        txtEmail.clear();
+        txtPhoneNumber.clear();
     }
 
     public void btnCancleMemberFormOnAction(ActionEvent actionEvent) {

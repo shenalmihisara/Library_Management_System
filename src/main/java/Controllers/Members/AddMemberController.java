@@ -1,6 +1,8 @@
 package Controllers.Members;
 
+import Controllers.Alert.AlertUtill;
 import DB.dbConnection;
+import javafx.scene.control.Alert;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,7 +16,7 @@ public class AddMemberController {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
-            preparedStatement.setInt(1, 4);
+            preparedStatement.setInt(1, 1);
             preparedStatement.setString(2, Name);
             preparedStatement.setString(3,Email);
             preparedStatement.setString(4, phonenumber);
@@ -23,7 +25,19 @@ public class AddMemberController {
             preparedStatement.executeUpdate();
             System.out.println("successfully added member");
 
+            AlertUtill.showAlert(Alert.AlertType.INFORMATION,
+                    "Sucess",
+                    "Sucessfully Add the member"
+                    );
+
+
+
         } catch (SQLException e) {
+
+            AlertUtill.showAlert(Alert.AlertType.ERROR,
+                    "Error",
+                    "Somthing went a wrong");
+
             throw new RuntimeException(e);
         }
     }
