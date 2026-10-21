@@ -67,7 +67,7 @@
           <TableColumn fx:id="colBookName" prefWidth="173.60003662109375" text="Book Name" />
             <TableColumn fx:id="colBookAuthor" prefWidth="219.19998168945312" text="Book Author" />
             <TableColumn fx:id="colRate" minWidth="0.0" prefWidth="70.4000244140625" text="Rate" />
-            <TableColumn minWidth="0.0" prefWidth="102.4000244140625" text="C2" />
+            <TableColumn fx:id="colBookCategory" minWidth="0.0" prefWidth="102.4000244140625" text="Category" />
         </columns>
          <styleClass>
             <String fx:value="table-row-cell" />

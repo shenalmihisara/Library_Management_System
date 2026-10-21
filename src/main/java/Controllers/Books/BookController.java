@@ -30,6 +30,7 @@ public class BookController {
                 row.put("book_name", resultSet.getString("book_name") != null ? resultSet.getString("book_name") : "");
                 row.put("book_author", resultSet.getString("book_author") != null ? resultSet.getString("book_author") : "");
                 row.put("rate", resultSet.getString("rate") != null ? resultSet.getString("rate") : "");
+                row.put("book_type", resultSet.getString("book_type") != null ? resultSet.getString("book_type") : "");
 
                 BookList.add(row);
             }

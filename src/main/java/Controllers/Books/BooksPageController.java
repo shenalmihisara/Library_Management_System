@@ -41,6 +41,9 @@ public class BooksPageController implements Initializable {
     public TableColumn<Map<String, String>, String>colRate;
 
     @FXML
+    public TableColumn<Map<String, String>, String>colBookCategory;
+
+    @FXML
     private Button btnBooks;
 
     @FXML
@@ -99,6 +102,8 @@ public class BooksPageController implements Initializable {
         colBookName.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("book_name", "")));
         colBookAuthor.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("book_author", "")));
         colRate.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("rate","")));
+        colBookCategory.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("book_type", "")));
+
 
     }
 
