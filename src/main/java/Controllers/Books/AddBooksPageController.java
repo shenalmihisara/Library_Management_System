@@ -8,6 +8,8 @@ import scean.SceanManager;
 
 public class AddBooksPageController {
 
+    AddBooksController addBooksController = new AddBooksController();
+
     @FXML
     private Button btnAddBooks;
 
@@ -33,16 +35,16 @@ public class AddBooksPageController {
     private Button btnRegisterBook;
 
     @FXML
-    private TextField txtBookAuthor;
+    public TextField txtBookAuthor;
 
     @FXML
-    private TextField txtBookId;
+    public TextField txtBookId;
 
     @FXML
-    private TextField txtBookName;
+    public TextField txtBookName;
 
     @FXML
-    private TextField txtRate;
+    public TextField txtRate;
 
     @FXML
     void btnAddBooksOnAction(ActionEvent event) {
@@ -82,7 +84,12 @@ public class AddBooksPageController {
 
     @FXML
     void btnRegisterBookOnAction(ActionEvent event) {
-        SceanManager.switchPage("/view/Books/Books_Page.fxml");
+        addBooksController.addBooks(
+                txtBookId.getText(),
+                txtBookName.getText(),
+                txtBookAuthor.getText(),
+                txtRate.getText()
+        );
     }
 
 }

@@ -14,7 +14,7 @@ public class AddMemberController {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
-            preparedStatement.setInt(1, 3);
+            preparedStatement.setInt(1, 4);
             preparedStatement.setString(2, Name);
             preparedStatement.setString(3,Email);
             preparedStatement.setString(4, phonenumber);
