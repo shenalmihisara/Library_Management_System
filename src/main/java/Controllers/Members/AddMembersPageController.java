@@ -3,6 +3,7 @@ package Controllers.Members;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -11,8 +12,10 @@ import javafx.stage.Stage;
 import scean.SceanManager;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class AddMembersPageController {
+public class AddMembersPageController implements Initializable {
 
     AddMemberController addMemberController = new AddMemberController();
 
@@ -49,6 +52,9 @@ public class AddMembersPageController {
         txtAddress.clear();
         txtEmail.clear();
         txtPhoneNumber.clear();
+
+        txtId.setText(addMemberController.genarateMemberId());
+        txtId.setEditable(false);
     }
 
     public void btnCancleMemberFormOnAction(ActionEvent actionEvent) {
@@ -85,5 +91,11 @@ public class AddMembersPageController {
 
     public void btnDeleteBooksOnAction(ActionEvent actionEvent) {
         SceanManager.switchPage("/view/Books/Delete_Books_Page.fxml");
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        txtId.setText(addMemberController.genarateMemberId());
+        txtId.setEditable(false);
     }
 }
