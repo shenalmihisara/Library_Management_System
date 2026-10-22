@@ -83,7 +83,16 @@
                               <Insets bottom="5.0" top="10.0" />
                            </VBox.margin>
                         </Label>
-                        <TextField fx:id="txtMemberId" layoutX="10.0" layoutY="70.0" promptText="Member Id" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="txtMemberId" prefHeight="42.0" prefWidth="226.0" promptText="Member Id" />
+                              <Button fx:id="btnGetMemberId" mnemonicParsing="false" onAction="#btnGetMemberIdOnAction" prefHeight="22.0" prefWidth="50.0" style="-fx-background-color: #1E3A5F;" text="Get Id" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="7.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
                         <Line endX="100.0" scaleY="3.0" startX="-215.0">
                            <VBox.margin>
                               <Insets bottom="5.0" top="24.0" />
@@ -100,7 +109,16 @@
                               <Insets bottom="5.0" top="10.0" />
                            </VBox.margin>
                         </Label>
-                        <TextField fx:id="txtBookId" layoutX="10.0" layoutY="252.0" promptText="Book Id" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="txtBookId" prefHeight="42.0" prefWidth="226.0" promptText="Book Id" />
+                              <Button fx:id="btnGetBookId" mnemonicParsing="false" onAction="#btnGetBookIdOnAction" prefHeight="22.0" prefWidth="50.0" style="-fx-background-color: #1E3A5F;" text="Get Id" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="7.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
                      </children>
                   </VBox>
                   <VBox layoutX="10.0" layoutY="10.0" prefHeight="474.0" prefWidth="314.0">
@@ -125,12 +143,12 @@
                               <Insets bottom="7.0" left="20.0" top="10.0" />
                            </VBox.margin>
                         </Label>
-                        <DatePicker layoutX="10.0" layoutY="48.0" styleClass="date-picker" stylesheets="@../css/IssueBooksPage.css">
+                        <DatePicker fx:id="dateDue" layoutX="10.0" layoutY="48.0" styleClass="date-picker" stylesheets="@../css/IssueBooksPage.css">
                            <VBox.margin>
                               <Insets left="20.0" />
                            </VBox.margin>
                         </DatePicker>
-                        <HBox fx:id="dateDue" prefHeight="60.0" prefWidth="313.0">
+                        <HBox prefHeight="60.0" prefWidth="313.0">
                            <VBox.margin>
                               <Insets top="18.0" />
                            </VBox.margin>
@@ -147,6 +165,11 @@
                               </Button>
                            </children>
                         </HBox>
+                        <TextField fx:id="txtIssueBookId" maxWidth="200.0">
+                           <VBox.margin>
+                              <Insets left="38.0" top="32.0" />
+                           </VBox.margin>
+                        </TextField>
                      </children></VBox>
                </children>
             </HBox>

@@ -1,14 +1,22 @@
 package Controllers.Books;
 
+import Controllers.Alert.AlertUtill;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import scean.SceanManager;
 
-public class IssueBooksPageController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class IssueBooksPageController implements Initializable {
+
+    IssueBooksController issueBooksController = new IssueBooksController();
 
     @FXML
     private Button btnAddBooks;
@@ -41,7 +49,7 @@ public class IssueBooksPageController {
     private Button btnMember;
 
     @FXML
-    private HBox dateDue;
+    private DatePicker dateDue;
 
     @FXML
     private DatePicker dateIssue;
@@ -57,6 +65,9 @@ public class IssueBooksPageController {
 
     @FXML
     private TextField txtMemberName;
+
+    @FXML
+    public TextField txtIssueBookId;
 
     @FXML
     void btnAddBooksOnAction(ActionEvent event) {
@@ -105,7 +116,50 @@ public class IssueBooksPageController {
 
     @FXML
     void btnIssueBookOnAction(ActionEvent event) {
+        issueBooksController.issueBooks(
+                issueBooksController.genarateIssueBookId(),
+                txtMemberId.getText(),
+                txtBookId.getText(),
+                dateIssue.getValue(),
+                dateDue.getValue()
+
+        );
+
+        txtMemberId.clear();
+        txtBookId.clear();
+        txtBookName.clear();
+        txtMemberName.clear();
+        dateIssue.setValue(null);
+        dateDue.setValue(null);
     }
 
 
+    public void btnGetMemberIdOnAction(ActionEvent actionEvent) {
+        String memberId = issueBooksController.getMemberIdFromDb(txtMemberName.getText());
+
+        if (memberId != null){
+            txtMemberId.setText(memberId);
+        }else {
+            txtMemberId.clear();
+            AlertUtill.showAlert(Alert.AlertType.ERROR,"Error","cannot find member Id");
+        }
+    }
+
+    public void btnGetBookIdOnAction(ActionEvent actionEvent) {
+        String bookId = issueBooksController.getBookIdFromDb(txtBookName.getText());
+
+        if (bookId != null){
+            txtBookId.setText(bookId);
+        }else {
+            txtBookId.clear();
+            AlertUtill.showAlert(Alert.AlertType.ERROR,"Error", "cannot find book Id");
+        }
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        txtMemberId.setEditable(false);
+
+        txtIssueBookId.setText("Your Issue Book Id Is : " + issueBooksController.genarateIssueBookId());
+    }
 }

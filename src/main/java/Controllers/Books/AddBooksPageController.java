@@ -106,6 +106,11 @@ public class AddBooksPageController implements Initializable {
                 txtRate.getText(),
                 comboBoxBookType.getValue().toString()
         );
+        txtBookId.clear();
+        txtBookName.clear();
+        txtBookAuthor.clear();
+        txtRate.clear();
+        comboBoxBookType.setValue("Book Type");
 
         txtBookId.setText(addBooksController.genarateBookId());
         txtBookId.setEditable(false);
