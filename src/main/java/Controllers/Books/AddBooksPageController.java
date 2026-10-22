@@ -106,6 +106,9 @@ public class AddBooksPageController implements Initializable {
                 txtRate.getText(),
                 comboBoxBookType.getValue().toString()
         );
+
+        txtBookId.setText(addBooksController.genarateBookId());
+        txtBookId.setEditable(false);
     }
 
     public void comboBoxBookTypeOnActon(ActionEvent actionEvent) {
@@ -113,6 +116,10 @@ public class AddBooksPageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        txtBookId.setText(addBooksController.genarateBookId());
+        txtBookId.setEditable(false);
+
         ObservableList<String> cmbList = FXCollections.observableArrayList();
         cmbList.add("Adventure");
         cmbList.add("Love Story");
