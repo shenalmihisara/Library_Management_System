@@ -1,11 +1,25 @@
 package Controllers.Books;
 
+import Controllers.Alert.AlertUtill;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import scean.SceanManager;
 
 public class DeleteBooksPageController {
+
+    DeleteBooksController deleteBooksController = new DeleteBooksController();
+
+    @FXML
+    public TextField txtBookName;
+
+    @FXML
+    public TextField txtBookId;
+
+    @FXML
+    public TextField txtReEnterBookId;
 
     @FXML
     private Button btnAddBooks;
@@ -79,10 +93,26 @@ public class DeleteBooksPageController {
 
     @FXML
     void btnCancleDeleteBooksOnAction(ActionEvent event) {
+        SceanManager.switchPage("/view/Books/Books_Page.fxml");
     }
 
     @FXML
     void btnDeleteBooksDataOnAction(ActionEvent event) {
+        if (deleteBooksController.checkBookNameAndBookId(
+                txtBookName.getText(), txtBookId.getText(), txtReEnterBookId.getText())){
+            AlertUtill.showAlert(Alert.AlertType.INFORMATION,
+                    "Sucess",
+                    "Member Deleted Sucessfully");
+
+            txtBookName.clear();
+            txtBookId.clear();
+            txtReEnterBookId.clear();
+
+        }else {
+            AlertUtill.showAlert(Alert.AlertType.ERROR,
+                    "Error",
+                    "Book Name Or Id Is Invalide");
+        }
     }
 
 }
