@@ -13,19 +13,24 @@ import scean.SceanManager;
 import java.io.IOException;
 
 public class AddMembersPageController {
-    Stage stage = new Stage();
+
     AddMemberController addMemberController = new AddMemberController();
 
     @FXML
     public TextField txtId;
+
     @FXML
     public TextField txtName;
+
     @FXML
     public TextField txtEmail;
+
     @FXML
     public TextField txtPhoneNumber;
+
     @FXML
     public TextField txtAddress;
+
     @FXML
     public Button btnMemberRegister;
 
@@ -76,5 +81,9 @@ public class AddMembersPageController {
 
     public void btnDeleteMemberOnAction(ActionEvent actionEvent) {
         SceanManager.switchPage("/view/Members/Delete_Member_page.fxml");
+    }
+
+    public void btnDeleteBooksOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Books/Delete_Books_Page.fxml");
     }
 }

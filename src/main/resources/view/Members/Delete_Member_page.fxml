@@ -13,7 +13,7 @@
    <children>
       <HBox layoutX="29.0" layoutY="7.0" prefHeight="100.0" prefWidth="200.0" styleClass="page-header" stylesheets="@../css/pageHeader.css" AnchorPane.bottomAnchor="608.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label styleClass="page-header-title" stylesheets="@../css/pageHeader.css" text="Delete Book Page" />
+            <Label styleClass="page-header-title" stylesheets="@../css/pageHeader.css" text="Delete Member Page" />
          </children>
       </HBox>
       <VBox layoutX="14.0" layoutY="86.0" prefHeight="608.0" prefWidth="100.0" styleClass="sidebar" stylesheets="@../css/Sidebar.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="862.0" AnchorPane.topAnchor="85.0">
@@ -40,6 +40,7 @@
             </Line>
             <Button fx:id="btnBooks" layoutX="25.0" layoutY="252.0" mnemonicParsing="false" onAction="#btnBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Books" />
             <Button fx:id="btnAddBooks" layoutX="25.0" layoutY="309.0" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add Books" />
+            <Button fx:id="btnDeleteBooks" mnemonicParsing="false" onAction="#btnDeleteBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Delete Books" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
@@ -48,14 +49,14 @@
             <Button fx:id="btnLogOut" layoutX="25.0" layoutY="367.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" styleClass="sidebar-logout" stylesheets="@../css/Sidebar.css" text="Logout" />
          </children>
       </VBox>
-      <VBox layoutX="249.0" layoutY="100.0" maxHeight="575.0" maxWidth="814.0" prefHeight="398.0" prefWidth="674.0" styleClass="form-card" stylesheets="@../css/DeleteMember.css">
+      <VBox layoutX="249.0" layoutY="100.0" maxHeight="575.0" maxWidth="814.0" prefHeight="398.0" prefWidth="674.0" styleClass="form-card" stylesheets="@../css/DeleteForm.css" AnchorPane.bottomAnchor="182.0" AnchorPane.leftAnchor="249.0" AnchorPane.rightAnchor="163.80000000000007" AnchorPane.topAnchor="100.0">
          <children>
-            <Label styleClass="delete-title" stylesheets="@../css/DeleteMember.css" text="Delete Members">
+            <Label styleClass="delete-title" stylesheets="@../css/DeleteForm.css" text="Delete Members">
                <VBox.margin>
                   <Insets left="30.0" />
                </VBox.margin>
             </Label>
-            <Label styleClass="delete-description" stylesheets="@../css/DeleteMember.css" text="Remove a member for your library" textFill="WHITE">
+            <Label styleClass="delete-description" stylesheets="@../css/DeleteForm.css" text="Remove a member for your library" textFill="WHITE">
                <VBox.margin>
                   <Insets left="30.0" />
                </VBox.margin>
@@ -65,37 +66,37 @@
                   <Insets left="10.0" />
                </VBox.margin>
             </Line>
-            <Label styleClass="delete-label" stylesheets="@../css/DeleteMember.css" text="Name">
+            <Label styleClass="delete-label" stylesheets="@../css/DeleteForm.css" text="Name">
                <VBox.margin>
                   <Insets left="20.0" />
                </VBox.margin>
             </Label>
-            <TextField fx:id="txtMemberName" prefHeight="26.0" prefWidth="731.0" styleClass="text-field" stylesheets="@../css/DeleteMember.css">
+            <TextField fx:id="txtMemberName" prefHeight="26.0" prefWidth="731.0" styleClass="text-field">
                <VBox.margin>
                   <Insets left="20.0" right="250.0" />
                </VBox.margin>
             </TextField>
-            <Label layoutX="39.0" layoutY="86.0" styleClass="delete-label" stylesheets="@../css/DeleteMember.css" text="Member Id">
+            <Label layoutX="39.0" layoutY="86.0" styleClass="delete-label" stylesheets="@../css/DeleteForm.css" text="Member Id">
                <VBox.margin>
                   <Insets left="20.0" />
                </VBox.margin>
             </Label>
-            <TextField fx:id="txtMemberId" layoutX="39.0" layoutY="110.0" prefHeight="26.0" prefWidth="731.0" styleClass="text-field" stylesheets="@../css/DeleteMember.css">
+            <TextField fx:id="txtMemberId" layoutX="39.0" layoutY="110.0" prefHeight="26.0" prefWidth="731.0" styleClass="text-field">
                <VBox.margin>
                   <Insets left="20.0" right="250.0" />
                </VBox.margin>
             </TextField>
-            <Label layoutX="19.0" layoutY="155.0" styleClass="delete-label" stylesheets="@../css/DeleteMember.css" text="Re Entter Member Id">
+            <Label layoutX="19.0" layoutY="155.0" styleClass="delete-label" stylesheets="@../css/DeleteForm.css" text="Re Entter Member Id">
                <VBox.margin>
                   <Insets left="20.0" />
                </VBox.margin>
             </Label>
-            <TextField fx:id="txtReEnterMemberId" layoutX="19.0" layoutY="179.0" prefHeight="26.0" prefWidth="731.0" styleClass="text-field" stylesheets="@../css/DeleteMember.css">
+            <TextField fx:id="txtReEnterMemberId" layoutX="19.0" layoutY="179.0" prefHeight="26.0" prefWidth="731.0" styleClass="text-field">
                <VBox.margin>
                   <Insets left="20.0" right="250.0" />
                </VBox.margin>
             </TextField>
-            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="delete-warning" stylesheets="@../css/DeleteMember.css">
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="delete-warning" stylesheets="@../css/DeleteForm.css">
                <children>
                   <Label text="Warning!" textFill="#d70f0f" />
                   <Label text="Deleting this record may permanently remove its data." textFill="RED" />
@@ -109,12 +110,12 @@
                   <Insets right="250.0" top="13.0" />
                </VBox.margin>
                <children>
-                  <Button fx:id="btnCancleDeleteMember" mnemonicParsing="false" onAction="#btnCancleDeleteMemberOnAction" prefHeight="38.0" prefWidth="136.0" styleClass="cancel-button" stylesheets="@../css/DeleteMember.css" text="Cancle">
+                  <Button fx:id="btnCancleDeleteMember" mnemonicParsing="false" onAction="#btnCancleDeleteMemberOnAction" prefHeight="38.0" prefWidth="136.0" styleClass="cancel-button" stylesheets="@../css/DeleteForm.css" text="Cancle">
                      <HBox.margin>
                         <Insets left="116.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="btnDeleteMemberData" mnemonicParsing="false" onAction="#btnDeleteMemberDataOnAction" prefHeight="38.0" prefWidth="136.0" styleClass="delete-button" stylesheets="@../css/DeleteMember.css" text="Delete Member">
+                  <Button fx:id="btnDeleteMemberData" mnemonicParsing="false" onAction="#btnDeleteMemberDataOnAction" prefHeight="38.0" prefWidth="136.0" styleClass="delete-button" stylesheets="@../css/DeleteForm.css" text="Delete Member">
                      <HBox.margin>
                         <Insets left="21.0" />
                      </HBox.margin>

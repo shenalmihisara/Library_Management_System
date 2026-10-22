@@ -97,6 +97,10 @@ public class BooksPageController implements Initializable {
         SceanManager.switchPage("/view/Books/Add_Books_Page.fxml");
     }
 
+    public void btnDeleteBooksOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Books/Delete_Books_Page.fxml");
+    }
+
     public void initiableColumns(){
         colBookId.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("book_id","")));
         colBookName.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("book_name", "")));

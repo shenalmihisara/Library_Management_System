@@ -35,7 +35,7 @@
             </Line>
             <Button fx:id="btnMember" layoutX="10.0" layoutY="28.0" mnemonicParsing="false" onAction="#btnMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Members" />
             <Button mnemonicParsing="false" onAction="#btnAddMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add Member" />
-            <Button fx:id="btnDeleteMember" mnemonicParsing="false" onAction="#btnDeleteMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/DeleteMember.css" text="Delete Member" />
+            <Button fx:id="btnDeleteMember" mnemonicParsing="false" onAction="#btnDeleteMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/DeleteForm.css" text="Delete Member" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
@@ -43,6 +43,7 @@
             </Line>
             <Button fx:id="btnBooks" layoutX="10.0" layoutY="53.0" mnemonicParsing="false" onAction="#btnBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Books" />
             <Button fx:id="btnAddBooks" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add Books" />
+            <Button fx:id="btnDeleteBoooks" mnemonicParsing="false" onAction="#btnDeleteBoooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Delete Books" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />

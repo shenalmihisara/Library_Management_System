@@ -118,4 +118,8 @@ public class MembersPageController implements Initializable {
     public void btnDeleteMemberOnAction(ActionEvent actionEvent) {
         SceanManager.switchPage("/view/Members/Delete_Member_page.fxml");
     }
+
+    public void btnDeleteBoooksOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Books/Delete_Books_Page.fxml");
+    }
 }

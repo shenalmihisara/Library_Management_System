@@ -93,6 +93,11 @@ public class AddBooksPageController implements Initializable {
     }
 
     @FXML
+    public void btnDeleteBooksOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Books/Delete_Books_Page.fxml");
+    }
+
+    @FXML
     void btnRegisterBookOnAction(ActionEvent event) {
         addBooksController.addBooks(
                 txtBookId.getText(),

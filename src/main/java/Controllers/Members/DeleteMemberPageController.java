@@ -89,6 +89,11 @@ public class DeleteMemberPageController {
     }
 
     @FXML
+    public void btnDeleteBooksOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Books/Delete_Books_Page.fxml");
+    }
+
+    @FXML
     void btnDeleteMemberDataOnAction(ActionEvent event) {
         if (deleteMemberController.CheckMemberNameAndMemberidAndReEntterMemberId(
                 txtMemberName.getText(), txtMemberId.getText(),txtMemberId.getText())){
@@ -108,5 +113,4 @@ public class DeleteMemberPageController {
             );
         }
     }
-
 }

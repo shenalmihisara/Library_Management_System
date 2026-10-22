@@ -39,6 +39,7 @@
             </Line>
             <Button fx:id="btnBooks" layoutX="10.0" layoutY="45.0" mnemonicParsing="false" onAction="#btnBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/style.css" text="Books" />
             <Button fx:id="btnAddBooks" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add Books" />
+            <Button fx:id="btnDeleteBooks" mnemonicParsing="false" onAction="#btnDeleteBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Delete Books" />
             <Line endX="100.0" layoutX="126.0" layoutY="110.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
