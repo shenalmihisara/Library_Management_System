@@ -96,7 +96,7 @@ public class DeleteMemberPageController {
     @FXML
     void btnDeleteMemberDataOnAction(ActionEvent event) {
         if (deleteMemberController.CheckMemberNameAndMemberidAndReEntterMemberId(
-                txtMemberName.getText(), txtMemberId.getText(),txtMemberId.getText())){
+                txtMemberName.getText(), txtMemberId.getText(),txtReEnterMemberId.getText())){
             AlertUtill.showAlert(Alert.AlertType.INFORMATION,
                     "Sucess",
                     "Member Deleted Sucessfully"

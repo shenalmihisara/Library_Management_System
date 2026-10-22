@@ -11,7 +11,7 @@ public class DeleteMemberController {
 
     public boolean CheckMemberNameAndMemberidAndReEntterMemberId(String name, String memberId, String reMemberId) {
 
-        if (!memberId.equals(reMemberId)){
+        if (!reMemberId.equals(memberId)){
             return false;
         }
 
