@@ -64,4 +64,16 @@ public class HomePageController {
     public void btnDeleteBooksOnAction(ActionEvent actionEvent) {
         SceanManager.switchPage("/view/Books/Delete_Books_Page.fxml");
     }
+
+    public void btnIssueBooksOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Books/Issue_Books_Page.fxml");
+    }
+
+    public void btnReturnBooksOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Books/Return_Books_Page.fxml");
+    }
+
+    public void btnBookHistoryOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Books/Books_History_Page.fxml");
+    }
 }

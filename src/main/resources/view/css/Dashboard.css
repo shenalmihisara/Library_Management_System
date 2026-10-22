@@ -59,4 +59,41 @@
     -fx-background-radius: 8px;
     -fx-padding: 10px;
 }
-```
+
+
+
+/* Default button */
+.home-button {
+    -fx-background-color: #10243D;
+    -fx-text-fill: #CBD5E1;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #294466;
+    -fx-padding: 12px 18px;
+    -fx-cursor: hand;
+}
+
+/* Mouse hover */
+.home-button:hover {
+    -fx-background-color: #1E3A5F;
+    -fx-text-fill: #93C5FD;
+    -fx-border-color: #3B82F6;
+}
+
+/* Clicked / active button */
+.home-button.active {
+    -fx-background-color: #1D4ED8;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #60A5FA;
+    -fx-border-width: 1.5px;
+}
+
+/* While pressing */
+.home-button:pressed {
+    -fx-background-color: #1E40AF;
+    -fx-text-fill: #FFFFFF;
+}
+
