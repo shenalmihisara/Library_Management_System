@@ -1,6 +1,8 @@
 package Controllers.Books;
 
+import Controllers.Alert.AlertUtill;
 import DB.dbConnection;
+import javafx.scene.control.Alert;
 
 import java.sql.*;
 import java.time.LocalDate;
@@ -65,6 +67,7 @@ public class IssueBooksController {
             preparedStatement.executeUpdate();
 
             System.out.println("Sucess");
+            AlertUtill.showAlert(Alert.AlertType.INFORMATION, "Sucess", "Sucessfully Add Member");
 
         } catch (SQLException e) {
             throw new RuntimeException(e);

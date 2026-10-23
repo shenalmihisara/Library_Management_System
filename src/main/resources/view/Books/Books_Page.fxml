@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="722.0" prefWidth="907.0" styleClass="books-page" stylesheets="@../css/BooksPage.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.BooksPageController">
+<AnchorPane prefHeight="737.0" prefWidth="907.0" styleClass="books-page" stylesheets="@../css/BooksPage.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.BooksPageController">
    <children>
       <VBox layoutY="74.4" prefHeight="648.0" prefWidth="220.0" spacing="10.0" styleClass="sidebar" stylesheets="@../css/Sidebar.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="687.0" AnchorPane.topAnchor="75.0">
          <padding>
@@ -80,5 +80,8 @@
       <Button layoutX="756.0" layoutY="137.0" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="add-member-button" stylesheets="@../css/BooksPage.css" text="+ Add books" />
       <TextField layoutX="246.0" layoutY="137.0" promptText="Search Books" styleClass="search-bar" stylesheets="@../css/BooksPage.css" />
       <Button layoutX="434.0" layoutY="138.0" mnemonicParsing="false" styleClass="button-primary" stylesheets="@../css/BooksPage.css" text="Search" />
+      <Button fx:id="btnIssueBooks" layoutX="264.0" layoutY="683.0" mnemonicParsing="false" onAction="#btnIssueBooksOnAction" styleClass="home-button" stylesheets="@../css/BooksPage.css" text="Issue Books" />
+      <Button layoutX="508.0" layoutY="683.0" mnemonicParsing="false" styleClass="home-button" stylesheets="@../css/BooksPage.css" text="Return Books" />
+      <Button layoutX="756.0" layoutY="683.0" mnemonicParsing="false" styleClass="home-button" stylesheets="@../css/BooksPage.css" text="Boook History" />
    </children>
 </AnchorPane>
