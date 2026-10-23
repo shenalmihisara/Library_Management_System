@@ -10,59 +10,58 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1062.0" styleClass="anchorpanebg" stylesheets="@../css/Anchorpane.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.ReturnBooksPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1062.0" styleClass="anchorpanebg" stylesheets="@../../css/Anchorpane.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.ReturnBooksPageController">
    <children>
-      <HBox layoutX="28.0" prefHeight="100.0" prefWidth="200.0" styleClass="page-header" stylesheets="@../css/pageHeader.css" AnchorPane.bottomAnchor="608.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox layoutX="28.0" prefHeight="100.0" prefWidth="200.0" styleClass="page-header" stylesheets="@../../css/pageHeader.css" AnchorPane.bottomAnchor="608.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label styleClass="page-header-title" stylesheets="@../css/pageHeader.css" text="Return Book Page" />
+            <Label styleClass="page-header-title" stylesheets="@../../css/pageHeader.css" text="Return Book Page" />
          </children>
       </HBox>
-      <VBox layoutX="28.0" layoutY="118.0" prefHeight="200.0" prefWidth="100.0" styleClass="sidebar" stylesheets="@../css/Sidebar.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="836.0" AnchorPane.topAnchor="85.0">
+      <VBox layoutX="28.0" layoutY="118.0" prefHeight="200.0" prefWidth="100.0" styleClass="sidebar" stylesheets="@../../css/Sidebar.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="836.0" AnchorPane.topAnchor="85.0">
          <children>
-            <Label styleClass="sidebar-title" stylesheets="@../css/Sidebar.css" text="Library" />
+            <Label styleClass="sidebar-title" stylesheets="@../../css/Sidebar.css" text="Library" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
                </VBox.margin>
             </Line>
-            <Button fx:id="btnHome" mnemonicParsing="false" onAction="#btnHomeOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Home" />
+            <Button fx:id="btnHome" mnemonicParsing="false" onAction="#btnHomeOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Home" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
                </VBox.margin>
             </Line>
-            <Button fx:id="btnMember" layoutX="10.0" layoutY="28.0" mnemonicParsing="false" onAction="#btnMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Member" />
-            <Button fx:id="btnAddMember" layoutX="10.0" layoutY="53.0" mnemonicParsing="false" onAction="#btnAddMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add Member" />
-            <Button fx:id="btnDeleteMember" layoutX="10.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnDeleteMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Delete Member" />
+            <Button fx:id="btnMember" layoutX="10.0" layoutY="28.0" mnemonicParsing="false" onAction="#btnMemberOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Member" />
+            <Button fx:id="btnAddMember" layoutX="10.0" layoutY="53.0" mnemonicParsing="false" onAction="#btnAddMemberOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Add Member" />
+            <Button fx:id="btnDeleteMember" layoutX="10.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnDeleteMemberOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Delete Member" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
                </VBox.margin>
             </Line>
-            <Button fx:id="btnBooks" layoutX="10.0" layoutY="104.0" mnemonicParsing="false" onAction="#btnBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Books" />
-            <Button fx:id="btnAddBooks" layoutX="10.0" layoutY="130.0" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add Books" />
-            <Button fx:id="btnDeleteBooks" layoutX="10.0" layoutY="156.0" mnemonicParsing="false" onAction="#btnDeleteBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Delete Books" />
+            <Button fx:id="btnBooks" layoutX="10.0" layoutY="104.0" mnemonicParsing="false" onAction="#btnBooksOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Books" />
+            <Button fx:id="btnAddBooks" layoutX="10.0" layoutY="130.0" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Add Books" />
+            <Button fx:id="btnDeleteBooks" layoutX="10.0" layoutY="156.0" mnemonicParsing="false" onAction="#btnDeleteBooksOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Delete Books" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
                </VBox.margin>
             </Line>
-            <Button fx:id="btnLogOut" layoutX="10.0" layoutY="181.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" styleClass="sidebar-logout" stylesheets="@../css/Sidebar.css" text="Logout" />
+            <Button fx:id="btnLogOut" layoutX="10.0" layoutY="181.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" styleClass="sidebar-logout" stylesheets="@../../css/Sidebar.css" text="Logout" />
          </children>
       </VBox>
-      <VBox layoutX="388.0" layoutY="147.0" prefHeight="200.0" prefWidth="100.0" styleClass="form-card" stylesheets="@../css/returnBooksPage.css" AnchorPane.bottomAnchor="58.00000000000006" AnchorPane.leftAnchor="301.0" AnchorPane.rightAnchor="81.20000000000005" AnchorPane.topAnchor="141.0">
+      <VBox layoutX="388.0" layoutY="147.0" prefHeight="200.0" prefWidth="100.0" styleClass="form-card" stylesheets="@../../css/returnBooksPage.css" AnchorPane.bottomAnchor="58.00000000000006" AnchorPane.leftAnchor="301.0" AnchorPane.rightAnchor="81.20000000000005" AnchorPane.topAnchor="141.0">
          <children>
             <HBox maxWidth="-Infinity" prefHeight="35.0" prefWidth="632.0">
                <children>
                   <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="121.0">
                      <children>
-                        <Label styleClass="form-title" stylesheets="@../css/returnBooksPage.css" text="Return A Book">
+                        <Label styleClass="form-title" stylesheets="@../../css/returnBooksPage.css" text="Return A Book">
                            <VBox.margin>
                               <Insets left="1.0" />
                            </VBox.margin>
                         </Label>
-                        <Label styleClass="form-description" stylesheets="@../css/returnBooksPage.css" text="Return a issue book">
+                        <Label styleClass="form-description" stylesheets="@../../css/returnBooksPage.css" text="Return a issue book">
                            <VBox.margin>
                               <Insets left="1.0" top="-1.0" />
                            </VBox.margin>
@@ -85,31 +84,40 @@
                <children>
                   <VBox prefHeight="466.0" prefWidth="323.0">
                      <children>
-                        <Label stylesheets="@../css/returnBooksPage.css" text="Member Name">
+                        <Label stylesheets="@../../css/returnBooksPage.css" text="Member Name">
                            <VBox.margin>
                               <Insets bottom="5.0" top="10.0" />
                            </VBox.margin>
                         </Label>
-                        <TextField fx:id="txtMemberName" />
-                        <Label layoutX="10.0" layoutY="20.0" stylesheets="@../css/returnBooksPage.css" text="Issue Book Id">
+                        <HBox prefHeight="40.0" prefWidth="322.0">
+                           <children>
+                              <TextField fx:id="txtMemberName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="255.0" />
+                              <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="34.0" prefWidth="65.0" styleClass="small-button" stylesheets="@../../css/returnBooksPage.css" text="Search">
+                                 <HBox.margin>
+                                    <Insets top="5.5" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Label layoutX="10.0" layoutY="20.0" stylesheets="@../../css/returnBooksPage.css" text="Issue Book Id">
                            <VBox.margin>
                               <Insets bottom="5.0" top="10.0" />
                            </VBox.margin>
                         </Label>
                         <TextField fx:id="txtIssueBookId" layoutX="10.0" layoutY="44.0" />
-                        <Label layoutX="10.0" layoutY="96.0" stylesheets="@../css/returnBooksPage.css" text="Member Id">
+                        <Label layoutX="10.0" layoutY="96.0" stylesheets="@../../css/returnBooksPage.css" text="Member Id">
                            <VBox.margin>
                               <Insets bottom="5.0" top="10.0" />
                            </VBox.margin>
                         </Label>
                         <TextField fx:id="txtMemberId" layoutX="10.0" layoutY="120.0" />
-                        <Label layoutX="10.0" layoutY="172.0" stylesheets="@../css/returnBooksPage.css" text="Book Id">
+                        <Label layoutX="10.0" layoutY="172.0" stylesheets="@../../css/returnBooksPage.css" text="Book Id">
                            <VBox.margin>
                               <Insets bottom="5.0" top="10.0" />
                            </VBox.margin>
                         </Label>
                         <TextField fx:id="txtBookId" layoutX="10.0" layoutY="196.0" />
-                        <Label layoutX="10.0" layoutY="248.0" stylesheets="@../css/returnBooksPage.css" text="Book Name">
+                        <Label layoutX="10.0" layoutY="248.0" stylesheets="@../../css/returnBooksPage.css" text="Book Name">
                            <VBox.margin>
                               <Insets bottom="5.0" top="10.0" />
                            </VBox.margin>
@@ -119,7 +127,7 @@
                   </VBox>
                   <VBox layoutX="10.0" layoutY="10.0" prefHeight="474.0" prefWidth="314.0">
                      <children>
-                        <Label styleClass="form-title" stylesheets="@../css/returnBooksPage.css" text="Date Range">
+                        <Label styleClass="form-title" stylesheets="@../../css/returnBooksPage.css" text="Date Range">
                            <VBox.margin>
                               <Insets left="20.0" />
                            </VBox.margin>
@@ -129,7 +137,7 @@
                               <Insets bottom="7.0" left="20.0" top="10.0" />
                            </VBox.margin>
                         </Label>
-                        <DatePicker fx:id="dateIssue" styleClass="date-picker" stylesheets="@../css/returnBooksPage.css">
+                        <DatePicker fx:id="dateIssue" styleClass="date-picker" stylesheets="@../../css/returnBooksPage.css">
                            <VBox.margin>
                               <Insets left="20.0" />
                            </VBox.margin>
@@ -139,7 +147,7 @@
                               <Insets bottom="7.0" left="20.0" top="10.0" />
                            </VBox.margin>
                         </Label>
-                        <DatePicker fx:id="dateDue" layoutX="10.0" layoutY="29.0" styleClass="date-picker" stylesheets="@../css/returnBooksPage.css">
+                        <DatePicker fx:id="dateDue" layoutX="10.0" layoutY="29.0" styleClass="date-picker" stylesheets="@../../css/returnBooksPage.css">
                            <VBox.margin>
                               <Insets left="20.0" />
                            </VBox.margin>
@@ -164,12 +172,12 @@
                               <Insets top="18.0" />
                            </VBox.margin>
                            <children>
-                              <Button fx:id="btnReturnBookCancle" mnemonicParsing="false" onAction="#btnReturnBookCancleOnAction" prefHeight="43.0" prefWidth="114.0" styleClass="btn-clear" stylesheets="@../css/returnBooksPage.css" text="Cancle">
+                              <Button fx:id="btnReturnBookCancle" mnemonicParsing="false" onAction="#btnReturnBookCancleOnAction" prefHeight="43.0" prefWidth="114.0" styleClass="btn-clear" stylesheets="@../../css/returnBooksPage.css" text="Cancle">
                                  <HBox.margin>
                                     <Insets left="47.0" />
                                  </HBox.margin>
                               </Button>
-                              <Button fx:id="btnReturnBook" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnReturnBookOnAction" prefHeight="42.0" prefWidth="150.0" styleClass="btn-issue" stylesheets="@../css/returnBooksPage.css" text="Return Books">
+                              <Button fx:id="btnReturnBook" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnReturnBookOnAction" prefHeight="42.0" prefWidth="150.0" styleClass="btn-issue" stylesheets="@../../css/returnBooksPage.css" text="Return Books">
                                  <HBox.margin>
                                     <Insets left="27.0" />
                                  </HBox.margin>

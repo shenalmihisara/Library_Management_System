@@ -12,14 +12,14 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="737.0" prefWidth="907.0" styleClass="books-page" stylesheets="@../css/BooksPage.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.BooksPageController">
+<AnchorPane prefHeight="737.0" prefWidth="907.0" styleClass="books-page" stylesheets="@../../css/BooksPage.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.BooksPageController">
    <children>
-      <VBox layoutY="74.4" prefHeight="648.0" prefWidth="220.0" spacing="10.0" styleClass="sidebar" stylesheets="@../css/Sidebar.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="687.0" AnchorPane.topAnchor="75.0">
+      <VBox layoutY="74.4" prefHeight="648.0" prefWidth="220.0" spacing="10.0" styleClass="sidebar" stylesheets="@../../css/Sidebar.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="687.0" AnchorPane.topAnchor="75.0">
          <padding>
             <Insets top="20.0" />
          </padding>
          <children>
-            <Label styleClass="sidebar-title" stylesheets="@../css/pageHeader.css" text="Library">
+            <Label styleClass="sidebar-title" stylesheets="@../../css/pageHeader.css" text="Library">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
@@ -29,32 +29,32 @@
                   <Insets left="-18.0" />
                </VBox.margin>
             </Line>
-            <Button fx:id="btnHome" mnemonicParsing="false" onAction="#btnHomeOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Home" />
+            <Button fx:id="btnHome" mnemonicParsing="false" onAction="#btnHomeOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Home" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
                </VBox.margin>
             </Line>
-            <Button fx:id="btnMember" layoutX="10.0" layoutY="58.0" mnemonicParsing="false" onAction="#btnMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Members" />
-            <Button fx:id="btnAddMemberSidebar" mnemonicParsing="false" onAction="#btnAddMemberSidebarOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add Member" />
-            <Button fx:id="btnDeleteMember" mnemonicParsing="false" onAction="#btnDeleteMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Delete Member" />
+            <Button fx:id="btnMember" layoutX="10.0" layoutY="58.0" mnemonicParsing="false" onAction="#btnMemberOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Members" />
+            <Button fx:id="btnAddMemberSidebar" mnemonicParsing="false" onAction="#btnAddMemberSidebarOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Add Member" />
+            <Button fx:id="btnDeleteMember" mnemonicParsing="false" onAction="#btnDeleteMemberOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Delete Member" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
                </VBox.margin>
             </Line>
-            <Button fx:id="btnBooks" layoutX="10.0" layoutY="94.0" mnemonicParsing="false" onAction="#btnBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Books" />
-            <Button fx:id="btnAddBooks" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add Books" />
-            <Button fx:id="btnDeleteBooks" mnemonicParsing="false" onAction="#btnDeleteBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Delete Books" />
+            <Button fx:id="btnBooks" layoutX="10.0" layoutY="94.0" mnemonicParsing="false" onAction="#btnBooksOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Books" />
+            <Button fx:id="btnAddBooks" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Add Books" />
+            <Button fx:id="btnDeleteBooks" mnemonicParsing="false" onAction="#btnDeleteBooksOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Delete Books" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
                </VBox.margin>
             </Line>
-            <Button fx:id="btnLogOut" layoutX="10.0" layoutY="130.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" styleClass="sidebar-logout" stylesheets="@../css/Sidebar.css" text="Log Out" />
+            <Button fx:id="btnLogOut" layoutX="10.0" layoutY="130.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" styleClass="sidebar-logout" stylesheets="@../../css/Sidebar.css" text="Log Out" />
          </children>
       </VBox>
-      <Label alignment="CENTER" layoutX="512.0" layoutY="55.0" maxHeight="85.0" prefHeight="85.0" prefWidth="907.0" stylesheets="@../css/pageHeader.css" text="Books" textAlignment="CENTER" textFill="#2664eb" AnchorPane.bottomAnchor="646.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Label alignment="CENTER" layoutX="512.0" layoutY="55.0" maxHeight="85.0" prefHeight="85.0" prefWidth="907.0" stylesheets="@../../css/pageHeader.css" text="Books" textAlignment="CENTER" textFill="#2664eb" AnchorPane.bottomAnchor="646.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <font>
             <Font name="System Bold" size="28.0" />
          </font>
@@ -63,7 +63,7 @@
             <String fx:value="page-header" />
          </styleClass>
       </Label>
-      <TableView fx:id="tableBooks" layoutX="246.0" layoutY="267.0" prefHeight="403.0" prefWidth="640.0" stylesheets="@../css/Table.css">
+      <TableView fx:id="tableBooks" layoutX="246.0" layoutY="267.0" prefHeight="403.0" prefWidth="640.0" stylesheets="@../../css/Table.css">
         <columns>
           <TableColumn fx:id="colBookId" prefWidth="75.0" text="Book Id" />
           <TableColumn fx:id="colBookName" prefWidth="173.60003662109375" text="Book Name" />
@@ -77,11 +77,11 @@
             <String fx:value="scroll-bar" />
          </styleClass>
       </TableView>
-      <Button layoutX="756.0" layoutY="137.0" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="add-member-button" stylesheets="@../css/BooksPage.css" text="+ Add books" />
-      <TextField layoutX="246.0" layoutY="137.0" promptText="Search Books" styleClass="search-bar" stylesheets="@../css/BooksPage.css" />
-      <Button layoutX="434.0" layoutY="138.0" mnemonicParsing="false" styleClass="button-primary" stylesheets="@../css/BooksPage.css" text="Search" />
-      <Button fx:id="btnIssueBooks" layoutX="264.0" layoutY="683.0" mnemonicParsing="false" onAction="#btnIssueBooksOnAction" styleClass="home-button" stylesheets="@../css/BooksPage.css" text="Issue Books" />
-      <Button layoutX="508.0" layoutY="683.0" mnemonicParsing="false" styleClass="home-button" stylesheets="@../css/BooksPage.css" text="Return Books" />
-      <Button layoutX="756.0" layoutY="683.0" mnemonicParsing="false" styleClass="home-button" stylesheets="@../css/BooksPage.css" text="Boook History" />
+      <Button layoutX="756.0" layoutY="137.0" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="add-member-button" stylesheets="@../../css/BooksPage.css" text="+ Add books" />
+      <TextField layoutX="246.0" layoutY="137.0" promptText="Search Books" styleClass="search-bar" stylesheets="@../../css/BooksPage.css" />
+      <Button layoutX="434.0" layoutY="138.0" mnemonicParsing="false" styleClass="button-primary" stylesheets="@../../css/BooksPage.css" text="Search" />
+      <Button fx:id="btnIssueBooks" layoutX="264.0" layoutY="683.0" mnemonicParsing="false" onAction="#btnIssueBooksOnAction" styleClass="home-button" stylesheets="@../../css/BooksPage.css" text="Issue Books" />
+      <Button layoutX="508.0" layoutY="683.0" mnemonicParsing="false" styleClass="home-button" stylesheets="@../../css/BooksPage.css" text="Return Books" />
+      <Button layoutX="756.0" layoutY="683.0" mnemonicParsing="false" styleClass="home-button" stylesheets="@../../css/BooksPage.css" text="Boook History" />
    </children>
 </AnchorPane>

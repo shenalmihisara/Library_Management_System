@@ -13,51 +13,51 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="1056.0" styleClass="anchorpanebg" stylesheets="@../css/Anchorpane.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.BookHistoryPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="1056.0" styleClass="anchorpanebg" stylesheets="@../../css/Anchorpane.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.BookHistoryPageController">
    <children>
-      <VBox layoutX="14.0" layoutY="102.4" maxWidth="227.0" prefHeight="586.0" prefWidth="227.0" styleClass="sidebar" stylesheets="@../css/Sidebar.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="829.0" AnchorPane.topAnchor="102.0">
+      <VBox layoutX="14.0" layoutY="102.4" maxWidth="227.0" prefHeight="586.0" prefWidth="227.0" styleClass="sidebar" stylesheets="@../../css/Sidebar.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="829.0" AnchorPane.topAnchor="102.0">
          <children>
-            <Label styleClass="sidebar-title" stylesheets="@../css/Sidebar.css" text="Library" />
+            <Label styleClass="sidebar-title" stylesheets="@../../css/Sidebar.css" text="Library" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
                </VBox.margin>
             </Line>
-            <Button fx:id="btnHome" mnemonicParsing="false" onAction="#btnHomeOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Home" />
+            <Button fx:id="btnHome" mnemonicParsing="false" onAction="#btnHomeOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Home" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
                </VBox.margin>
             </Line>
-            <Button fx:id="btnMember" layoutX="10.0" layoutY="28.0" mnemonicParsing="false" onAction="#btnMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Members" />
-            <Button fx:id="btnAddMemberSidebar" layoutX="10.0" layoutY="53.0" mnemonicParsing="false" onAction="#btnAddMemberSidebarOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add Member" />
-            <Button fx:id="btnDeleteMember" layoutX="10.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnDeleteMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Delete Member" />
+            <Button fx:id="btnMember" layoutX="10.0" layoutY="28.0" mnemonicParsing="false" onAction="#btnMemberOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Members" />
+            <Button fx:id="btnAddMemberSidebar" layoutX="10.0" layoutY="53.0" mnemonicParsing="false" onAction="#btnAddMemberSidebarOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Add Member" />
+            <Button fx:id="btnDeleteMember" layoutX="10.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnDeleteMemberOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Delete Member" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
                </VBox.margin>
             </Line>
-            <Button fx:id="btnBooks" layoutX="10.0" layoutY="104.0" mnemonicParsing="false" onAction="#btnBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Books" />
-            <Button fx:id="btnAddBooks" layoutX="10.0" layoutY="130.0" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add Books" />
-            <Button fx:id="btnDeleteBooks" layoutX="10.0" layoutY="156.0" mnemonicParsing="false" onAction="#btnDeleteBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Delete Books" />
+            <Button fx:id="btnBooks" layoutX="10.0" layoutY="104.0" mnemonicParsing="false" onAction="#btnBooksOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Books" />
+            <Button fx:id="btnAddBooks" layoutX="10.0" layoutY="130.0" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Add Books" />
+            <Button fx:id="btnDeleteBooks" layoutX="10.0" layoutY="156.0" mnemonicParsing="false" onAction="#btnDeleteBooksOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Delete Books" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
                </VBox.margin>
             </Line>
-            <Button fx:id="btnLogOut" layoutX="10.0" layoutY="181.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" styleClass="sidebar-logout" stylesheets="@../css/Sidebar.css" text="Logout" />
+            <Button fx:id="btnLogOut" layoutX="10.0" layoutY="181.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" styleClass="sidebar-logout" stylesheets="@../../css/Sidebar.css" text="Logout" />
          </children>
       </VBox>
-      <HBox layoutX="41.0" layoutY="14.0" maxHeight="108.0" prefHeight="85.0" prefWidth="1013.0" styleClass="page-header" stylesheets="@../css/pageHeader.css" AnchorPane.bottomAnchor="585.6" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox layoutX="41.0" layoutY="14.0" maxHeight="108.0" prefHeight="85.0" prefWidth="1013.0" styleClass="page-header" stylesheets="@../../css/pageHeader.css" AnchorPane.bottomAnchor="585.6" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label styleClass="page-header-title" stylesheets="@../css/pageHeader.css" text="Book History Page" />
+            <Label styleClass="page-header-title" stylesheets="@../../css/pageHeader.css" text="Book History Page" />
          </children>
       </HBox>
-      <TextField layoutX="245.0" layoutY="117.0" prefHeight="32.0" prefWidth="172.0" promptText="Search Book name..." styleClass="history-search" stylesheets="@../css/BookHistoryPage.css" AnchorPane.bottomAnchor="534.4" AnchorPane.topAnchor="121.79999999999998" />
-      <ComboBox layoutX="493.0" layoutY="125.0" prefWidth="150.0" promptText="Book Id" styleClass="history-combo" stylesheets="@../css/BookHistoryPage.css" />
-      <ComboBox layoutX="714.0" layoutY="125.0" prefWidth="150.0" promptText="Member Id" styleClass="history-combo" stylesheets="@../css/BookHistoryPage.css" />
-      <Button layoutX="917.0" layoutY="120.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="68.0" styleClass="history-secondary-button" stylesheets="@../css/BookHistoryPage.css" text="Search" AnchorPane.bottomAnchor="533.6" AnchorPane.topAnchor="121.0" />
-      <TableView layoutX="245.0" layoutY="173.0" prefHeight="478.0" prefWidth="791.0" stylesheets="@../css/BookHistoryPage.css">
+      <TextField layoutX="245.0" layoutY="117.0" prefHeight="32.0" prefWidth="172.0" promptText="Search Book name..." styleClass="history-search" stylesheets="@../../css/BookHistoryPage.css" AnchorPane.bottomAnchor="534.4" AnchorPane.topAnchor="121.79999999999998" />
+      <ComboBox layoutX="493.0" layoutY="125.0" prefWidth="150.0" promptText="Book Id" styleClass="history-combo" stylesheets="@../../css/BookHistoryPage.css" />
+      <ComboBox layoutX="714.0" layoutY="125.0" prefWidth="150.0" promptText="Member Id" styleClass="history-combo" stylesheets="@../../css/BookHistoryPage.css" />
+      <Button layoutX="917.0" layoutY="120.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="68.0" styleClass="history-secondary-button" stylesheets="@../../css/BookHistoryPage.css" text="Search" AnchorPane.bottomAnchor="533.6" AnchorPane.topAnchor="121.0" />
+      <TableView layoutX="245.0" layoutY="173.0" prefHeight="478.0" prefWidth="791.0" stylesheets="@../../css/BookHistoryPage.css">
         <columns>
           <TableColumn fx:id="colHistoryId" prefWidth="83.20001220703125" text="History Id" />
             <TableColumn fx:id="colBookId" prefWidth="70.4000244140625" text="Book Id" />

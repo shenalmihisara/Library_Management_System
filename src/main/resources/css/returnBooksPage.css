@@ -111,3 +111,25 @@
 .btn-clear:hover {
     -fx-background-color: #294466;
 }
+
+
+.small-button {
+    -fx-background-color: #2563EB;
+    -fx-text-fill: white;
+
+    -fx-padding: 5px 10px;
+    -fx-min-width: 60px;
+    -fx-pref-height: 27px;
+    -fx-max-height: 27px;
+
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.small-button:hover {
+    -fx-background-color: #1D4ED8;
+}
+
+.small-button:pressed {
+    -fx-background-color: #1E40AF;
+}

@@ -12,13 +12,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="753.0" prefWidth="1078.0" styleClass="anchorpanebg" stylesheets="@../css/Anchorpane.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Members.AddMembersPageController">
+<AnchorPane prefHeight="753.0" prefWidth="1078.0" styleClass="anchorpanebg" stylesheets="@../../css/Anchorpane.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Members.AddMembersPageController">
    <children>
       <HBox layoutY="98.0" prefHeight="686.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="67.0">
          <children>
-            <VBox maxHeight="-Infinity" maxWidth="220.0" minHeight="-Infinity" minWidth="220.0" prefWidth="220.0" spacing="20.0" stylesheets="@../css/Sidebar.css">
+            <VBox maxHeight="-Infinity" maxWidth="220.0" minHeight="-Infinity" minWidth="220.0" prefWidth="220.0" spacing="20.0" stylesheets="@../../css/Sidebar.css">
                <children>
-                  <Label maxHeight="220.0" maxWidth="220.0" prefWidth="220.0" styleClass="sidebar-title" stylesheets="@../css/Sidebar.css" text="Library" textFill="WHITE">
+                  <Label maxHeight="220.0" maxWidth="220.0" prefWidth="220.0" styleClass="sidebar-title" stylesheets="@../../css/Sidebar.css" text="Library" textFill="WHITE">
                      <font>
                         <Font name="Segoe UI Bold" size="22.0" />
                      </font>
@@ -28,43 +28,43 @@
                         <Insets left="-18.0" />
                      </VBox.margin>
                   </Line>
-                  <Button fx:id="btnHome" maxHeight="220.0" maxWidth="220.0" mnemonicParsing="false" onAction="#btnHomeOnAction" prefWidth="220.0" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Home" />
+                  <Button fx:id="btnHome" maxHeight="220.0" maxWidth="220.0" mnemonicParsing="false" onAction="#btnHomeOnAction" prefWidth="220.0" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Home" />
                   <Line endX="100.0" scaleY="3.0" scaleZ="0.0" startX="-127.0">
                      <VBox.margin>
                         <Insets left="-18.0" />
                      </VBox.margin>
                   </Line>
-                  <Button fx:id="btnMember" mnemonicParsing="false" onAction="#btnMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Members" />
-                  <Button fx:id="btnAddMember" mnemonicParsing="false" onAction="#btnAddMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add Member" />
-                  <Button fx:id="btnDeleteMember" mnemonicParsing="false" onAction="#btnDeleteMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Delete Member" />
+                  <Button fx:id="btnMember" mnemonicParsing="false" onAction="#btnMemberOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Members" />
+                  <Button fx:id="btnAddMember" mnemonicParsing="false" onAction="#btnAddMemberOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Add Member" />
+                  <Button fx:id="btnDeleteMember" mnemonicParsing="false" onAction="#btnDeleteMemberOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Delete Member" />
                   <Line endX="100.0" layoutX="126.0" layoutY="79.0" scaleY="3.0" startX="-127.0">
                      <VBox.margin>
                         <Insets left="-18.0" />
                      </VBox.margin>
                   </Line>
-                  <Button fx:id="btnBooks" mnemonicParsing="false" onAction="#btnBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Books" />
-                  <Button fx:id="btnAddBooks" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add Books" />
-                  <Button fx:id="btnDeleteBooks" mnemonicParsing="false" onAction="#btnDeleteBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Delete Books" />
+                  <Button fx:id="btnBooks" mnemonicParsing="false" onAction="#btnBooksOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Books" />
+                  <Button fx:id="btnAddBooks" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Add Books" />
+                  <Button fx:id="btnDeleteBooks" mnemonicParsing="false" onAction="#btnDeleteBooksOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Delete Books" />
                   <Line endX="100.0" layoutX="126.0" layoutY="279.0" scaleY="3.0" startX="-127.0">
                      <VBox.margin>
                         <Insets left="-18.0" />
                      </VBox.margin>
                   </Line>
-                  <Button fx:id="btnLogOut" mnemonicParsing="false" onAction="#btnLogOutOnAction" styleClass="sidebar-logout" stylesheets="@../css/Sidebar.css" text="Logout" />
+                  <Button fx:id="btnLogOut" mnemonicParsing="false" onAction="#btnLogOutOnAction" styleClass="sidebar-logout" stylesheets="@../../css/Sidebar.css" text="Logout" />
                </children>
                <styleClass>
                   <String fx:value="sidebar" />
                   <String fx:value="sidebar-title" />
                </styleClass>
             </VBox>
-            <VBox prefHeight="626.0" prefWidth="800.0" spacing="6.0" styleClass="form-card" stylesheets="@../css/memberRegistatioForm.css">
+            <VBox prefHeight="626.0" prefWidth="800.0" spacing="6.0" styleClass="form-card" stylesheets="@../../css/memberRegistatioForm.css">
                <children>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="470.0" styleClass="section-title" stylesheets="@../css/memberRegistatioForm.css" text="Member registation form">
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="470.0" styleClass="section-title" stylesheets="@../../css/memberRegistatioForm.css" text="Member registation form">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="198.0" styleClass="page-subtitle" stylesheets="@../css/memberRegistatioForm.css" text="Register a new library member">
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="198.0" styleClass="page-subtitle" stylesheets="@../../css/memberRegistatioForm.css" text="Register a new library member">
                      <font>
                         <Font name="System Italic" size="14.0" />
                      </font>
@@ -77,7 +77,7 @@
                         <Font name="System Bold Italic" size="12.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtId" prefHeight="41.0" prefWidth="573.0" promptText="C001" styleClass="field-label" stylesheets="@../css/memberRegistatioForm.css" />
+                  <TextField fx:id="txtId" prefHeight="41.0" prefWidth="573.0" promptText="C001" styleClass="field-label" stylesheets="@../../css/memberRegistatioForm.css" />
                   <Label layoutX="41.0" layoutY="104.0" maxHeight="1.7976931348623157E308" prefHeight="33.0" prefWidth="118.0" text="Full Name" textFill="WHITE">
                      <VBox.margin>
                         <Insets right="455.0" />
@@ -86,7 +86,7 @@
                         <Font name="System Bold Italic" size="12.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtName" layoutX="41.0" layoutY="122.0" promptText="Your full name" styleClass="section-title" stylesheets="@../css/memberRegistatioForm.css" />
+                  <TextField fx:id="txtName" layoutX="41.0" layoutY="122.0" promptText="Your full name" styleClass="section-title" stylesheets="@../../css/memberRegistatioForm.css" />
                   <Label layoutX="41.0" layoutY="104.0" maxHeight="1.7976931348623157E308" prefHeight="41.0" prefWidth="119.0" text="Email" textFill="WHITE">
                      <VBox.margin>
                         <Insets right="455.0" />
@@ -95,7 +95,7 @@
                         <Font name="System Bold Italic" size="12.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtEmail" layoutX="41.0" layoutY="166.0" promptText="example@gmail.com" styleClass="section-title" stylesheets="@../css/memberRegistatioForm.css" />
+                  <TextField fx:id="txtEmail" layoutX="41.0" layoutY="166.0" promptText="example@gmail.com" styleClass="section-title" stylesheets="@../../css/memberRegistatioForm.css" />
                   <Label layoutX="41.0" layoutY="192.0" maxHeight="1.7976931348623157E308" prefHeight="43.0" prefWidth="123.0" text="Phone Number" textFill="#f2f2f2">
                      <VBox.margin>
                         <Insets right="455.0" />
@@ -104,7 +104,7 @@
                         <Font name="System Bold Italic" size="12.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtPhoneNumber" layoutX="41.0" layoutY="210.0" promptText="07xx xxx xxx" styleClass="field-label" stylesheets="@../css/memberRegistatioForm.css" />
+                  <TextField fx:id="txtPhoneNumber" layoutX="41.0" layoutY="210.0" promptText="07xx xxx xxx" styleClass="field-label" stylesheets="@../../css/memberRegistatioForm.css" />
                   <Label layoutX="41.0" layoutY="236.0" maxHeight="1.7976931348623157E308" prefHeight="43.0" prefWidth="90.0" text="Address" textFill="#f4f4f4">
                      <VBox.margin>
                         <Insets right="455.0" />
@@ -113,13 +113,13 @@
                         <Font name="System Bold Italic" size="12.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtAddress" layoutX="41.0" layoutY="254.0" promptText="Your Address" styleClass="section-title" stylesheets="@../css/memberRegistatioForm.css" />
-                  <Button fx:id="btnMemberRegister" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnMemberRegisterOnAction" styleClass="btn-save" stylesheets="@../css/memberRegistatioForm.css" text="Register Member">
+                  <TextField fx:id="txtAddress" layoutX="41.0" layoutY="254.0" promptText="Your Address" styleClass="section-title" stylesheets="@../../css/memberRegistatioForm.css" />
+                  <Button fx:id="btnMemberRegister" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnMemberRegisterOnAction" styleClass="btn-save" stylesheets="@../../css/memberRegistatioForm.css" text="Register Member">
                      <VBox.margin>
                         <Insets top="30.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="btnCancleMemberForm" layoutX="41.0" layoutY="512.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnCancleMemberFormOnAction" style="-fx-background-color: #FEE2E2;" styleClass="btn-cancel" stylesheets="@../css/memberRegistatioForm.css" text="Cancle">
+                  <Button fx:id="btnCancleMemberForm" layoutX="41.0" layoutY="512.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnCancleMemberFormOnAction" style="-fx-background-color: #FEE2E2;" styleClass="btn-cancel" stylesheets="@../../css/memberRegistatioForm.css" text="Cancle">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
@@ -131,7 +131,7 @@
             </VBox>
          </children>
       </HBox>
-      <HBox layoutX="-10.0" styleClass="page-header" stylesheets="@../css/pageHeader.css" AnchorPane.bottomAnchor="682.6" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox layoutX="-10.0" styleClass="page-header" stylesheets="@../../css/pageHeader.css" AnchorPane.bottomAnchor="682.6" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" Add Member Page" wrappingWidth="315.60467529296875">
                <font>

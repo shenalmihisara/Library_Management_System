@@ -11,61 +11,61 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1087.0" styleClass="anchorpanebg" stylesheets="@../css/Anchorpane.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.AddBooksPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1087.0" styleClass="anchorpanebg" stylesheets="@../../css/Anchorpane.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.AddBooksPageController">
    <children>
-      <VBox layoutX="14.0" layoutY="84.8" maxWidth="225.0" prefHeight="547.0" prefWidth="225.0" styleClass="sidebar" stylesheets="@../css/Sidebar.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="862.0" AnchorPane.topAnchor="85.0">
+      <VBox layoutX="14.0" layoutY="84.8" maxWidth="225.0" prefHeight="547.0" prefWidth="225.0" styleClass="sidebar" stylesheets="@../../css/Sidebar.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="862.0" AnchorPane.topAnchor="85.0">
          <children>
-            <Label styleClass="sidebar-title" stylesheets="@../css/Sidebar.css" text="Library" />
+            <Label styleClass="sidebar-title" stylesheets="@../../css/Sidebar.css" text="Library" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
                </VBox.margin>
             </Line>
-            <Button fx:id="btnHome" mnemonicParsing="false" onAction="#btnHomeOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Home" />
+            <Button fx:id="btnHome" mnemonicParsing="false" onAction="#btnHomeOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Home" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
                </VBox.margin>
             </Line>
-            <Button fx:id="btnMember" mnemonicParsing="false" onAction="#btnMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Member" />
-            <Button fx:id="btnAddMember" mnemonicParsing="false" onAction="#btnAddMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add Member" />
-            <Button fx:id="btnDeleteMember" mnemonicParsing="false" onAction="#btnDeleteMemberOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Delete Member" />
+            <Button fx:id="btnMember" mnemonicParsing="false" onAction="#btnMemberOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Member" />
+            <Button fx:id="btnAddMember" mnemonicParsing="false" onAction="#btnAddMemberOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Add Member" />
+            <Button fx:id="btnDeleteMember" mnemonicParsing="false" onAction="#btnDeleteMemberOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Delete Member" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
                </VBox.margin>
             </Line>
-            <Button fx:id="btnBooks" mnemonicParsing="false" onAction="#btnBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Books" />
-            <Button fx:id="btnAddBooks" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Add Books" />
-            <Button fx:id="btnDeleteBooks" mnemonicParsing="false" onAction="#btnDeleteBooksOnAction" styleClass="sidebar-button" stylesheets="@../css/Sidebar.css" text="Delete Books" />
+            <Button fx:id="btnBooks" mnemonicParsing="false" onAction="#btnBooksOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Books" />
+            <Button fx:id="btnAddBooks" mnemonicParsing="false" onAction="#btnAddBooksOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Add Books" />
+            <Button fx:id="btnDeleteBooks" mnemonicParsing="false" onAction="#btnDeleteBooksOnAction" styleClass="sidebar-button" stylesheets="@../../css/Sidebar.css" text="Delete Books" />
             <Line endX="100.0" scaleY="3.0" startX="-127.0">
                <VBox.margin>
                   <Insets left="-18.0" />
                </VBox.margin>
             </Line>
-            <Button fx:id="btnLogOut" mnemonicParsing="false" onAction="#btnLogOutOnAction" styleClass="sidebar-logout" stylesheets="@../css/Sidebar.css" text="Logout" />
+            <Button fx:id="btnLogOut" mnemonicParsing="false" onAction="#btnLogOutOnAction" styleClass="sidebar-logout" stylesheets="@../../css/Sidebar.css" text="Logout" />
          </children></VBox>
-      <HBox layoutX="22.0" maxHeight="86.0" prefHeight="86.0" prefWidth="1087.0" styleClass="page-header" stylesheets="@../css/pageHeader.css" AnchorPane.bottomAnchor="608.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox layoutX="22.0" maxHeight="86.0" prefHeight="86.0" prefWidth="1087.0" styleClass="page-header" stylesheets="@../../css/pageHeader.css" AnchorPane.bottomAnchor="608.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label styleClass="page-header-title" stylesheets="@../css/pageHeader.css" text="Add Book Page" />
+            <Label styleClass="page-header-title" stylesheets="@../../css/pageHeader.css" text="Add Book Page" />
          </children>
       </HBox>
-      <VBox layoutX="250.0" layoutY="120.0" maxHeight="552.0" maxWidth="822.0" prefHeight="552.0" prefWidth="822.0" styleClass="form-card" stylesheets="@../css/AddBookPage.css" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="120.0">
+      <VBox layoutX="250.0" layoutY="120.0" maxHeight="552.0" maxWidth="822.0" prefHeight="552.0" prefWidth="822.0" styleClass="form-card" stylesheets="@../../css/AddBookPage.css" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="120.0">
          <padding>
             <Insets left="30.0" right="30.0" top="30.0" />
          </padding>
          <children>
-            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="470.0" styleClass="section-title" stylesheets="@../css/memberRegistatioForm.css" text="Book registation form">
+            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="470.0" styleClass="section-title" stylesheets="@../../css/memberRegistatioForm.css" text="Book registation form">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="198.0" styleClass="page-subtitle" stylesheets="@../css/memberRegistatioForm.css" text="Register a new library Books">
+            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="198.0" styleClass="page-subtitle" stylesheets="@../../css/memberRegistatioForm.css" text="Register a new library Books">
                <font>
                   <Font name="System Italic" size="14.0" />
                </font>
             </Label>
-            <Label styleClass="field-label" stylesheets="@../css/AddBookPage.css" text="Book Id" textFill="#ecebeb">
+            <Label styleClass="field-label" stylesheets="@../../css/AddBookPage.css" text="Book Id" textFill="#ecebeb">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
@@ -78,7 +78,7 @@
                   <Insets left="12.0" />
                </VBox.margin>
             </TextField>
-            <Label layoutX="31.0" layoutY="91.0" styleClass="field-label" stylesheets="@../css/AddBookPage.css" text="Book Name" textFill="#ecebeb">
+            <Label layoutX="31.0" layoutY="91.0" styleClass="field-label" stylesheets="@../../css/AddBookPage.css" text="Book Name" textFill="#ecebeb">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
@@ -91,7 +91,7 @@
                   <Insets left="12.0" />
                </VBox.margin>
             </TextField>
-            <Label layoutX="19.0" layoutY="150.0" styleClass="field-label" stylesheets="@../css/AddBookPage.css" text="Book Author" textFill="#ecebeb">
+            <Label layoutX="19.0" layoutY="150.0" styleClass="field-label" stylesheets="@../../css/AddBookPage.css" text="Book Author" textFill="#ecebeb">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
@@ -104,7 +104,7 @@
                   <Insets left="12.0" />
                </VBox.margin>
             </TextField>
-            <Label layoutX="19.0" layoutY="209.0" styleClass="field-label" stylesheets="@../css/AddBookPage.css" text="Rate" textFill="#ecebeb">
+            <Label layoutX="19.0" layoutY="209.0" styleClass="field-label" stylesheets="@../../css/AddBookPage.css" text="Rate" textFill="#ecebeb">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
@@ -117,7 +117,7 @@
                   <Insets bottom="8.0" left="12.0" />
                </VBox.margin>
             </TextField>
-            <Label layoutX="31.0" layoutY="316.0" styleClass="field-label" stylesheets="@../css/AddBookPage.css" text="Book Type" textFill="#ecebeb">
+            <Label layoutX="31.0" layoutY="316.0" styleClass="field-label" stylesheets="@../../css/AddBookPage.css" text="Book Type" textFill="#ecebeb">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
@@ -125,17 +125,17 @@
                   <Insets bottom="8.0" left="12.0" />
                </VBox.margin>
             </Label>
-            <ComboBox fx:id="comboBoxBookType" onAction="#comboBoxBookTypeOnActon" prefWidth="150.0" promptText="Book Type" styleClass="combo-box" stylesheets="@../css/AddBookPage.css">
+            <ComboBox fx:id="comboBoxBookType" onAction="#comboBoxBookTypeOnActon" prefWidth="150.0" promptText="Book Type" styleClass="combo-box" stylesheets="@../../css/AddBookPage.css">
                <VBox.margin>
                   <Insets left="12.0" />
                </VBox.margin>
             </ComboBox>
-            <Button fx:id="btnRegisterBook" mnemonicParsing="false" onAction="#btnRegisterBookOnAction" styleClass="btn-save" stylesheets="@../css/style.css" text="Register  Book">
+            <Button fx:id="btnRegisterBook" mnemonicParsing="false" onAction="#btnRegisterBookOnAction" styleClass="btn-save" stylesheets="@../../css/style.css" text="Register  Book">
                <VBox.margin>
                   <Insets left="660.0" top="28.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btnCancleBookRegister" layoutX="679.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnCancleBookRegisterOnAction" styleClass="btn-cancel" stylesheets="@../css/style.css" text="Cancle">
+            <Button fx:id="btnCancleBookRegister" layoutX="679.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnCancleBookRegisterOnAction" styleClass="btn-cancel" stylesheets="@../../css/style.css" text="Cancle">
                <VBox.margin>
                   <Insets left="700.0" />
                </VBox.margin>
