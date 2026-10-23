@@ -3,15 +3,33 @@ package Controllers.Home;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import scean.SceanManager;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class HomePageController {
+public class HomePageController implements Initializable {
+
+    HomeController homeController = new HomeController();
+
+    @FXML
+    public Label lblBorrowedBookCount;
+
+    @FXML
+    public Label lblOverdueBookCount;
+
+    @FXML
+    public Label lblMemberCount;
+
+    @FXML
+    public Label lblBookCount;
 
     @FXML
     private Button btnBooks;
@@ -75,5 +93,11 @@ public class HomePageController {
 
     public void btnBookHistoryOnAction(ActionEvent actionEvent) {
         SceanManager.switchPage("/view/Books/Books_History_Page.fxml");
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        lblMemberCount.setText(String.valueOf(homeController.memberCount()));
+        lblBookCount.setText(String.valueOf(homeController.bookCount()));
     }
 }
