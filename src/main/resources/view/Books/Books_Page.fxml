@@ -81,7 +81,7 @@
       <TextField layoutX="246.0" layoutY="137.0" promptText="Search Books" styleClass="search-bar" stylesheets="@../../css/BooksPage.css" />
       <Button layoutX="434.0" layoutY="138.0" mnemonicParsing="false" styleClass="button-primary" stylesheets="@../../css/BooksPage.css" text="Search" />
       <Button fx:id="btnIssueBooks" layoutX="264.0" layoutY="683.0" mnemonicParsing="false" onAction="#btnIssueBooksOnAction" styleClass="home-button" stylesheets="@../../css/BooksPage.css" text="Issue Books" />
-      <Button layoutX="508.0" layoutY="683.0" mnemonicParsing="false" styleClass="home-button" stylesheets="@../../css/BooksPage.css" text="Return Books" />
-      <Button layoutX="756.0" layoutY="683.0" mnemonicParsing="false" styleClass="home-button" stylesheets="@../../css/BooksPage.css" text="Boook History" />
+      <Button fx:id="btnReturmBooks" layoutX="508.0" layoutY="683.0" mnemonicParsing="false" onAction="#btnReturmBooksOnAction" styleClass="home-button" stylesheets="@../../css/BooksPage.css" text="Return Books" />
+      <Button fx:id="btnBookHistory" layoutX="756.0" layoutY="683.0" mnemonicParsing="false" onAction="#btnBookHistoryOnAction" styleClass="home-button" stylesheets="@../../css/BooksPage.css" text="Boook History" />
    </children>
 </AnchorPane>

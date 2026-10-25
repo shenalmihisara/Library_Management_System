@@ -121,17 +121,17 @@ public class ReturnBooksPageController implements Initializable {
 
     @FXML
     void btnReturnBookOnAction(ActionEvent event) {
-//        returnBookController.returnBooks(
-//                txtReturnBookId.getText(),
-//                txtMemberName.getText(),
-//                txtIssueBookId.getText(),
-//                txtMemberId.getText(),
-//                txtBookId.getText(),
-//                txtBookName.getText(),
-//                dateIssue.getValue(),
-//                dateDue.getValue(),
-//                dateReturn.getValue()
-//        );
+        returnBookController.returnBooks(
+                txtReturnBookId.getText(),
+                txtBookId.getText(),
+                txtMemberId.getText(),
+                dateIssue.getValue(),
+                dateDue.getValue(),
+                dateReturn.getValue()
+        );
+
+        returnBookController.deleteIssueBook(txtIssueBookId);
+
     }
 
     public void btnSearchOnAction(ActionEvent actionEvent) {

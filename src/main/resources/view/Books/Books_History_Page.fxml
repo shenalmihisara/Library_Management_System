@@ -57,17 +57,17 @@
       <ComboBox layoutX="493.0" layoutY="125.0" prefWidth="150.0" promptText="Book Id" styleClass="history-combo" stylesheets="@../../css/BookHistoryPage.css" />
       <ComboBox layoutX="714.0" layoutY="125.0" prefWidth="150.0" promptText="Member Id" styleClass="history-combo" stylesheets="@../../css/BookHistoryPage.css" />
       <Button layoutX="917.0" layoutY="120.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="68.0" styleClass="history-secondary-button" stylesheets="@../../css/BookHistoryPage.css" text="Search" AnchorPane.bottomAnchor="533.6" AnchorPane.topAnchor="121.0" />
-      <TableView layoutX="245.0" layoutY="173.0" prefHeight="478.0" prefWidth="791.0" stylesheets="@../../css/BookHistoryPage.css">
+      <TableView fx:id="tblReturnBookHistory" layoutX="245.0" layoutY="173.0" prefHeight="478.0" prefWidth="791.0" stylesheets="@../../css/BookHistoryPage.css">
         <columns>
-          <TableColumn fx:id="colHistoryId" prefWidth="83.20001220703125" text="History Id" />
-            <TableColumn fx:id="colBookId" prefWidth="70.4000244140625" text="Book Id" />
-            <TableColumn fx:id="colBookName" prefWidth="105.5999755859375" text="Book Name" />
+            <TableColumn fx:id="colReturnId" prefWidth="76.4000244140625" text="Return Id" />
+            <TableColumn fx:id="colBookId" prefWidth="67.5999755859375" text="Book Id" />
+            <TableColumn fx:id="colBookName" prefWidth="107.4000244140625" text="Book Name" />
             <TableColumn fx:id="colMemberId" prefWidth="84.80001831054688" text="Member Id" />
             <TableColumn fx:id="colMemberName" prefWidth="107.20001220703125" text="Member Name" />
             <TableColumn fx:id="colIssueDate" prefWidth="88.0" text="Issue Date" />
             <TableColumn fx:id="colDueDate" prefWidth="80.79998779296875" text="Due Date" />
             <TableColumn fx:id="colReturnDate" prefWidth="95.9998779296875" text="Return Date" />
-            <TableColumn fx:id="colStatus" prefWidth="78.4000244140625" text="Status" />
+          <TableColumn fx:id="colStatus" minWidth="19.0" prefWidth="78.20001220703125" text="status" />
         </columns>
          <styleClass>
             <String fx:value="history-table" />

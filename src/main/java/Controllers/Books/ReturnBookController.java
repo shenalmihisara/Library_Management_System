@@ -1,11 +1,11 @@
 package Controllers.Books;
 
+import Controllers.Alert.AlertUtill;
 import DB.dbConnection;
+import javafx.scene.control.Alert;
+import javafx.scene.control.TextField;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
@@ -73,6 +73,47 @@ public class ReturnBookController {
         }
 
         return null;
+
+    }
+
+    public void returnBooks(String return_book_id, String book_id, String member_id, LocalDate issue_date, LocalDate due_date, LocalDate return_date) {
+
+        String SQL = "INSERT INTO return_book_history(return_book_id, book_id, member_id, issue_date, due_date, return_date) VALUES(?, ?, ?, ?, ?, ?)";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            preparedStatement.setString(1, return_book_id);
+            preparedStatement.setString(2, book_id);
+            preparedStatement.setString(3, member_id);
+            preparedStatement.setDate(4, Date.valueOf(issue_date));
+            preparedStatement.setDate(5, Date.valueOf(due_date));
+            preparedStatement.setDate(6, Date.valueOf(return_date));
+
+            preparedStatement.executeUpdate();
+            System.out.println("Sucess");
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public void deleteIssueBook(TextField txtIssueBookId) {
+        String SQL = "DELETE FROM issueBooks WHERE issue_book_id = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            preparedStatement.setString(1, txtIssueBookId.getText());
+
+            preparedStatement.executeUpdate();
+
+            AlertUtill.showAlert(Alert.AlertType.INFORMATION, "Sucess", "Sucessfully You Return Book");
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 

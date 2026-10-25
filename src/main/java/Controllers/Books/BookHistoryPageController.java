@@ -1,12 +1,23 @@
 package Controllers.Books;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import scean.SceanManager;
 
-public class BookHistoryPageController {
+import java.net.URL;
+import java.util.Map;
+import java.util.ResourceBundle;
+
+public class BookHistoryPageController implements Initializable {
+
+    BookHistoryController bookHistoryController = new BookHistoryController();
 
     @FXML
     private Button btnAddBooks;
@@ -33,31 +44,39 @@ public class BookHistoryPageController {
     private Button btnMember;
 
     @FXML
-    private TableColumn<?, ?> colBookId;
+    public TableView<Map<String, String>>tblReturnBookHistory;
 
     @FXML
-    private TableColumn<?, ?> colBookName;
+    public TableColumn<Map<String, String>, String>colReturnId;
 
     @FXML
-    private TableColumn<?, ?> colDueDate;
+    private TableColumn<Map<String, String>, String> colBookId;
 
     @FXML
-    private TableColumn<?, ?> colHistoryId;
+    private TableColumn<Map<String, String>, String> colBookName;
 
     @FXML
-    private TableColumn<?, ?> colIssueDate;
+    private TableColumn<Map<String, String>, String> colDueDate;
 
     @FXML
-    private TableColumn<?, ?> colMemberId;
+    private TableColumn<Map<String, String>, String> colHistoryId;
 
     @FXML
-    private TableColumn<?, ?> colMemberName;
+    private TableColumn<Map<String, String>, String> colIssueDate;
 
     @FXML
-    private TableColumn<?, ?> colReturnDate;
+    private TableColumn<Map<String, String>, String> colMemberId;
 
     @FXML
-    private TableColumn<?, ?> colStatus;
+    private TableColumn<Map<String, String>, String> colMemberName;
+
+    @FXML
+    private TableColumn<Map<String, String>, String> colReturnDate;
+
+    @FXML
+    private TableColumn<Map<String, String>, String> colStatus;
+
+    private ObservableList<Map<String, String>> masterReturnBookHistory = FXCollections.observableArrayList();
 
     @FXML
     void btnAddBooksOnAction(ActionEvent event) {
@@ -99,4 +118,28 @@ public class BookHistoryPageController {
         SceanManager.switchPage("/view/Members/Members_page.fxml");
     }
 
+    public void initiableColumns(){
+        colReturnId.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("return_id", "")));
+        colBookId.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("book_id", "")));
+        colBookName.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("book_name", "")));
+        colMemberId.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("member_id", "")));
+        colMemberName.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("member_name", "")));
+        colIssueDate.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("issue_date", "")));
+        colDueDate.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("due_date", "")));
+        colReturnDate.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("return_date", "")));
+        colStatus.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("status", "")));
+    }
+
+    public void loadTable(){
+        ObservableList<Map<String, String>> returnBookHistoryFromDb = bookHistoryController.getBookHistoryBooks();
+        masterReturnBookHistory.setAll(returnBookHistoryFromDb);
+        tblReturnBookHistory.setItems(masterReturnBookHistory);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        initiableColumns();
+        loadTable();
+
+    }
 }

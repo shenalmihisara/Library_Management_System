@@ -131,4 +131,12 @@ public class BooksPageController implements Initializable {
     public void btnIssueBooksOnAction(ActionEvent actionEvent) {
         SceanManager.switchPage("/view/Books/Issue_Books_Page.fxml");
     }
+
+    public void btnReturmBooksOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Books/Return_Books_Page.fxml");
+    }
+
+    public void btnBookHistoryOnAction(ActionEvent actionEvent) {
+        SceanManager.switchPage("/view/Books/Books_History_Page.fxml");
+    }
 }
