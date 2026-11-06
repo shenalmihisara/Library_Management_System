@@ -17,14 +17,7 @@ public class dbConnection {
                     "1234"
             );
         } catch (SQLException e) {
-            try {
-                connection = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/Library_Management_System",
-                        "root",
-                        "1234");
-            } catch (SQLException ex) {
-                throw new RuntimeException(ex);
-            }
+            throw new RuntimeException(e);
         }
     }
 

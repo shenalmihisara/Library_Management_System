@@ -1,11 +1,13 @@
 package Controllers.Members;
 
+import Controllers.Alert.AlertUtill;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -39,15 +41,39 @@ public class AddMembersPageController implements Initializable {
 
 
     public void btnMemberRegisterOnAction(ActionEvent actionEvent) {
-        addMemberController.addMembers(
-                txtId.getText(),
-                txtName.getText(),
-                txtAddress.getText(),
-                txtEmail.getText(),
-                txtPhoneNumber.getText()
-        );
 
-        txtId.clear();
+        String memberId = txtId.getText();
+        String name = txtName.getText();
+        String address = txtAddress.getText();
+        String email = txtEmail.getText();
+        String phoneNumber = txtPhoneNumber.getText();
+
+
+
+        if (memberId == null || memberId.trim().isEmpty() ||
+                name == null || name.trim().isEmpty() ||
+                address == null || address.trim().isEmpty() ||
+                email == null || email.trim().isEmpty() ||
+                phoneNumber == null || phoneNumber.trim().isEmpty()
+        ){
+            AlertUtill.showAlert(Alert.AlertType.WARNING, "WARNING", "Fill All Requid Fields");
+
+            return;
+        }
+
+        boolean MemberAdded = addMemberController.addMembers(memberId, name, address, email, phoneNumber);
+
+        if (MemberAdded){
+            AlertUtill.showAlert(Alert.AlertType.INFORMATION,
+                    "SUCESS!",
+                    "Sucessfully Add Member!  Your Member Id : " + memberId);
+        } else {
+            AlertUtill.showAlert(Alert.AlertType.ERROR,
+                    "Error",
+                    "Faild to add Student"
+            );
+        }
+
         txtName.clear();
         txtAddress.clear();
         txtEmail.clear();

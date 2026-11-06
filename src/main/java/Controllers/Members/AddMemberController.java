@@ -1,6 +1,5 @@
 package Controllers.Members;
 
-import Controllers.Alert.AlertUtill;
 import DB.dbConnection;
 import javafx.scene.control.Alert;
 
@@ -38,7 +37,7 @@ public class AddMemberController {
         return null;
     }
 
-    public void addMembers(String Id, String Name, String Address, String Email, String phonenumber) {
+    public boolean addMembers(String Id, String Name, String Address, String Email, String phonenumber) {
         String SQL = "INSERT INTO members(member_id, member_name, email, phone_number, address) VALUE(?, ?, ?, ?, ?)";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
@@ -49,10 +48,9 @@ public class AddMemberController {
             preparedStatement.setString(4, phonenumber);
             preparedStatement.setString(5, Address);
 
-            preparedStatement.executeUpdate();
-            System.out.println("successfully added member" + genarateMemberId());
+            return preparedStatement.executeUpdate() > 0;
 
-            AlertUtill.showAlert(Alert.AlertType.INFORMATION, "SUCESS!", "Sucessfully Add Member!  Your Member Id : " + Id);
+
 
         } catch (SQLException e) {
 
