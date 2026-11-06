@@ -1,13 +1,16 @@
 package Controllers.Books;
 
+import Controllers.Alert.AlertUtill;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import model.BookDTO;
 import scean.SceanManager;
 
 import java.net.URL;
@@ -99,13 +102,40 @@ public class AddBooksPageController implements Initializable {
 
     @FXML
     void btnRegisterBookOnAction(ActionEvent event) {
-        addBooksController.addBooks(
-                txtBookId.getText(),
-                txtBookName.getText(),
-                txtBookAuthor.getText(),
-                txtRate.getText(),
-                comboBoxBookType.getValue().toString()
-        );
+
+        BookDTO bookDTO = new BookDTO();
+
+        bookDTO.setBookId(txtBookId.getText());
+        bookDTO.setBookName(txtBookName.getText());
+        bookDTO.setBookAuthor(txtBookAuthor.getText());
+        bookDTO.setRate(txtRate.getText());
+        bookDTO.setBookTytpe(comboBoxBookType.getValue().toString());
+
+        if (
+                bookDTO.getBookId() == null || bookDTO.getBookId().trim().isEmpty() ||
+                bookDTO.getBookName() == null || bookDTO.getBookName().trim().isEmpty() ||
+                bookDTO.getBookAuthor() == null || bookDTO.getBookAuthor().trim().isEmpty() ||
+                bookDTO.getRate() == null || bookDTO.getRate().trim().isEmpty() ||
+                bookDTO.getBookTytpe() == null || bookDTO.getBookTytpe().trim().isEmpty()
+        ){
+            AlertUtill.showAlert(Alert.AlertType.WARNING,
+                    "WARNING",
+                    "Fill All Requid Fields");
+            return;
+        }
+
+        boolean bookAdded = addBooksController.addBooks(bookDTO);
+
+        if (bookAdded){
+            AlertUtill.showAlert(Alert.AlertType.INFORMATION,
+                    "SUCESS",
+                    "Sucessfully Add Book!  Your Book Id : " + bookDTO.getBookId());
+        } else {
+            AlertUtill.showAlert(Alert.AlertType.ERROR,
+                    "ERROR",
+                    "Faild To Add Book");
+        }
+
         txtBookId.clear();
         txtBookName.clear();
         txtBookAuthor.clear();
