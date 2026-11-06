@@ -2,6 +2,7 @@ package Controllers.Members;
 
 import DB.dbConnection;
 import javafx.scene.control.Alert;
+import model.MemberDTO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -37,16 +38,16 @@ public class AddMemberController {
         return null;
     }
 
-    public boolean addMembers(String Id, String Name, String Address, String Email, String phonenumber) {
+    public boolean addMembers(MemberDTO memberDTO) {
         String SQL = "INSERT INTO members(member_id, member_name, email, phone_number, address) VALUE(?, ?, ?, ?, ?)";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
-            preparedStatement.setString(1, Id);
-            preparedStatement.setString(2, Name);
-            preparedStatement.setString(3,Email);
-            preparedStatement.setString(4, phonenumber);
-            preparedStatement.setString(5, Address);
+            preparedStatement.setString(1, memberDTO.getMemberId());
+            preparedStatement.setString(2, memberDTO.getFullName());
+            preparedStatement.setString(3,memberDTO.getEmail());
+            preparedStatement.setString(4, memberDTO.getPhoneNumber());
+            preparedStatement.setString(5, memberDTO.getAddress());
 
             return preparedStatement.executeUpdate() > 0;
 

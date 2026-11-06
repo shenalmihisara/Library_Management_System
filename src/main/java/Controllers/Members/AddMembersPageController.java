@@ -11,6 +11,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import model.MemberDTO;
 import scean.SceanManager;
 
 import java.io.IOException;
@@ -42,31 +43,33 @@ public class AddMembersPageController implements Initializable {
 
     public void btnMemberRegisterOnAction(ActionEvent actionEvent) {
 
-        String memberId = txtId.getText();
-        String name = txtName.getText();
-        String address = txtAddress.getText();
-        String email = txtEmail.getText();
-        String phoneNumber = txtPhoneNumber.getText();
+        MemberDTO memberDTO = new MemberDTO();
+
+        memberDTO.setMemberId(txtId.getText());
+        memberDTO.setFullName(txtName.getText());
+        memberDTO.setAddress(txtAddress.getText());
+        memberDTO.setEmail(txtEmail.getText());
+        memberDTO.setPhoneNumber(txtPhoneNumber.getText());
 
 
 
-        if (memberId == null || memberId.trim().isEmpty() ||
-                name == null || name.trim().isEmpty() ||
-                address == null || address.trim().isEmpty() ||
-                email == null || email.trim().isEmpty() ||
-                phoneNumber == null || phoneNumber.trim().isEmpty()
+        if (memberDTO.getMemberId() == null || memberDTO.getMemberId().trim().isEmpty() ||
+                memberDTO.getFullName() == null || memberDTO.getFullName().trim().isEmpty() ||
+                memberDTO.getAddress() == null || memberDTO.getAddress().trim().isEmpty() ||
+                memberDTO.getEmail() == null || memberDTO.getEmail().trim().isEmpty() ||
+                memberDTO.getPhoneNumber() == null || memberDTO.getPhoneNumber().trim().isEmpty()
         ){
             AlertUtill.showAlert(Alert.AlertType.WARNING, "WARNING", "Fill All Requid Fields");
 
             return;
         }
 
-        boolean MemberAdded = addMemberController.addMembers(memberId, name, address, email, phoneNumber);
+        boolean MemberAdded = addMemberController.addMembers(memberDTO);
 
         if (MemberAdded){
             AlertUtill.showAlert(Alert.AlertType.INFORMATION,
                     "SUCESS!",
-                    "Sucessfully Add Member!  Your Member Id : " + memberId);
+                    "Sucessfully Add Member!  Your Member Id : " + memberDTO.getMemberId());
         } else {
             AlertUtill.showAlert(Alert.AlertType.ERROR,
                     "Error",
