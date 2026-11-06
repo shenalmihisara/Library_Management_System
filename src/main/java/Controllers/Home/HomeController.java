@@ -43,4 +43,36 @@ public class HomeController {
         }
         return 0;
     }
+
+    public int issueBookCount() {
+        String SQL = "SELECT COUNT(*) FROM issueBooks";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()){
+                return resultSet.getInt(1);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return 0;
+    }
+
+    public int returnBookCount() {
+        String SQL = "SELECT COUNT(*) FROM return_book_history";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()){
+                return resultSet.getInt(1);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return 0;
+    }
 }

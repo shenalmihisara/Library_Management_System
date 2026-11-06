@@ -20,10 +20,10 @@ public class HomePageController implements Initializable {
     HomeController homeController = new HomeController();
 
     @FXML
-    public Label lblBorrowedBookCount;
+    public Label lblIssueBookCount;
 
     @FXML
-    public Label lblOverdueBookCount;
+    public Label lblreturnBookCount;
 
     @FXML
     public Label lblMemberCount;
@@ -99,5 +99,7 @@ public class HomePageController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         lblMemberCount.setText(String.valueOf(homeController.memberCount()));
         lblBookCount.setText(String.valueOf(homeController.bookCount()));
+        lblIssueBookCount.setText(String.valueOf(homeController.issueBookCount()));
+        lblreturnBookCount.setText(String.valueOf(homeController.returnBookCount()));
     }
 }

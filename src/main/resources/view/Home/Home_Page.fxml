@@ -65,7 +65,7 @@
             <Insets top="20.0" />
          </padding>
          <children>
-            <Label prefHeight="22.0" prefWidth="190.0" stylesheets="@../../css/Dashboard.css" text="Currently Borrowed Books">
+            <Label prefHeight="22.0" prefWidth="190.0" stylesheets="@../../css/Dashboard.css" text="Return Books">
                <font>
                   <Font name="System Bold Italic" size="15.0" />
                </font>
@@ -74,7 +74,7 @@
                   <String fx:value="card-icon" />
                </styleClass>
             </Label>
-            <Label fx:id="lblBorrowedBookCount" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" style="-fx-text-alignment: center;" styleClass="card-value" stylesheets="@../../css/Dashboard.css" text="0" textAlignment="CENTER">
+            <Label fx:id="lblreturnBookCount" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" style="-fx-text-alignment: center;" styleClass="card-value" stylesheets="@../../css/Dashboard.css" text="0" textAlignment="CENTER">
                <font>
                   <Font size="23.0" />
                </font>
@@ -90,7 +90,7 @@
             <Insets top="20.0" />
          </padding>
          <children>
-            <Label prefHeight="22.0" prefWidth="190.0" stylesheets="@../../css/Dashboard.css" text="Overdue Books">
+            <Label prefHeight="22.0" prefWidth="190.0" stylesheets="@../../css/Dashboard.css" text="Issue Books">
                <font>
                   <Font name="System Bold Italic" size="15.0" />
                </font>
@@ -99,7 +99,7 @@
                   <String fx:value="card-icon" />
                </styleClass>
             </Label>
-            <Label fx:id="lblOverdueBookCount" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" style="-fx-text-alignment: center;" styleClass="card-value" stylesheets="@../../css/Dashboard.css" text="0" textAlignment="CENTER">
+            <Label fx:id="lblIssueBookCount" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" style="-fx-text-alignment: center;" styleClass="card-value" stylesheets="@../../css/Dashboard.css" text="0" textAlignment="CENTER">
                <font>
                   <Font size="23.0" />
                </font>
