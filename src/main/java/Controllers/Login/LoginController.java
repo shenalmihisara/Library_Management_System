@@ -1,6 +1,7 @@
 package Controllers.Login;
 
 import DB.dbConnection;
+import model.LoginDTO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,7 +11,7 @@ import java.sql.SQLException;
 public class LoginController {
     Connection connection = dbConnection.getInstance().getConnection();
 
-    public boolean CheckUserNameAndPassword(String username, String password) {
+    public boolean CheckUserNameAndPassword(LoginDTO loginDTO) {
         String SQL = "SELECT * FROM users";
 
         try {
@@ -21,7 +22,7 @@ public class LoginController {
                 String dbUsername = resultSet.getString("username");
                 String dbPassword = resultSet.getString("password");
 
-                if (dbUsername.equals(username) && dbPassword.equals(password)){
+                if (dbUsername.equals(loginDTO.getUserName()) && dbPassword.equals(loginDTO.getPassword())){
                     return true;
                 }
             }

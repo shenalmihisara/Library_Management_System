@@ -10,6 +10,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import model.LoginDTO;
 import scean.SceanManager;
 
 import java.io.IOException;
@@ -29,7 +30,13 @@ public class LoginPageController {
 
     @FXML
     void btnLoginOnAction(ActionEvent event) {
-        if (loginController.CheckUserNameAndPassword(txtUserName.getText(),txtPassword.getText())) {
+
+        LoginDTO loginDTO = new LoginDTO();
+
+        loginDTO.setUserName(txtUserName.getText());
+        loginDTO.setPassword(txtPassword.getText());
+
+        if (loginController.CheckUserNameAndPassword(loginDTO)) {
             SceanManager.switchPage("/view/Home/Home_Page.fxml");
         }else {
             SceanManager.switchPage("/view/Login/Login_error_page.fxml");
