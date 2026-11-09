@@ -1,0 +1,113 @@
+/* ===== FORM CARD ===== */
+.form-card {
+    -fx-background-color: #0B1930;
+    -fx-background-radius: 14px;
+    -fx-border-color: #1E3354;
+    -fx-border-radius: 14px;
+    -fx-border-width: 1px;
+    -fx-padding: 22px;
+    -fx-spacing: 14px;
+}
+
+/* ===== Form Title ===== */
+.form-title {
+    -fx-text-fill: #F8FAFC;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+/* ===== Form Description ===== */
+.form-description {
+    -fx-text-fill: #94A3B8;
+    -fx-font-size: 13px;
+}
+
+/* ===== SECTION TITLES ===== */
+.section-title {
+    -fx-text-fill: #60A5FA;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* ===== TEXT FIELDS ===== */
+.text-field {
+    -fx-background-color: #061329;
+    -fx-text-fill: #F8FAFC;
+    -fx-prompt-text-fill: #64748B;
+    -fx-border-color: #294466;
+    -fx-border-width: 1px;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-padding: 10px 12px;
+    -fx-font-size: 13px;
+}
+
+.text-field:focused {
+    -fx-border-color: #3B82F6;
+    -fx-border-width: 1.5px;
+}
+
+/* ===== FIELD LABELS ===== */
+.label {
+    -fx-text-fill: #CBD5E1;
+    -fx-font-size: 13px;
+}
+
+/* ===== DATE PICKER ===== */
+.date-picker {
+    -fx-background-color: #061329;
+    -fx-border-color: #294466;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+}
+
+.date-picker .text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #F8FAFC;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: #1E3354;
+    -fx-background-radius: 0 6px 6px 0;
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: #60A5FA;
+}
+
+/* ===== ISSUE BOOK BUTTON ===== */
+.btn-issue {
+    -fx-background-color: #2563EB;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-padding: 11px 24px;
+    -fx-cursor: hand;
+}
+
+.btn-issue:hover {
+    -fx-background-color: #3B82F6;
+}
+
+.btn-issue:pressed {
+    -fx-background-color: #1D4ED8;
+}
+
+/* ===== CLEAR BUTTON ===== */
+.btn-clear {
+    -fx-background-color: #1E3354;
+    -fx-text-fill: #CBD5E1;
+    -fx-font-size: 13px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #294466;
+    -fx-padding: 11px 24px;
+    -fx-cursor: hand;
+}
+
+.btn-clear:hover {
+    -fx-background-color: #294466;
+}

@@ -1,0 +1,102 @@
+/* Main Table */
+.table-view {
+    -fx-background-color: #0B1930;
+    -fx-border-color: #1E3354;
+    -fx-border-width: 1px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-padding: 0;
+}
+
+/* Remove default table background */
+.table-view .virtual-flow .clipped-container .sheet {
+    -fx-background-color: #0B1930;
+}
+
+/* Column Headers */
+.table-view .column-header-background {
+    -fx-background-color: #122744;
+    -fx-background-radius: 10px 10px 0 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-size: 42px;
+    -fx-border-color: transparent #294466 #294466 transparent;
+    -fx-border-width: 0 1px 1px 0;
+}
+
+/* Header Text */
+.table-view .column-header .label {
+    -fx-text-fill: #CBD5E1;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 10px;
+}
+
+/* Table Rows */
+.table-row-cell {
+    -fx-background-color: #0B1930;
+    -fx-border-color: transparent transparent #1E3354 transparent;
+    -fx-border-width: 0 0 1px 0;
+    -fx-cell-size: 42px;
+}
+
+/* Alternating Rows */
+.table-row-cell:odd {
+    -fx-background-color: #0E1E36;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #0B1930;
+}
+
+/* Cell Text */
+.table-cell {
+    -fx-text-fill: #E2E8F0;
+    -fx-font-size: 12px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 12px;
+    -fx-border-color: transparent;
+}
+
+/* Hover Row */
+.table-row-cell:hover {
+    -fx-background-color: #142D4D;
+}
+
+/* Selected Row */
+.table-row-cell:selected {
+    -fx-background-color: #163A70;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Empty Table Message Area */
+.table-view .placeholder .label {
+    -fx-text-fill: #64748B;
+    -fx-font-size: 13px;
+}
+
+/* Scrollbars */
+.table-view .scroll-bar:vertical,
+.table-view .scroll-bar:horizontal {
+    -fx-background-color: #0B1930;
+}
+
+.table-view .scroll-bar .thumb {
+    -fx-background-color: #294466;
+    -fx-background-radius: 5px;
+}
+
+.table-view .scroll-bar .thumb:hover {
+    -fx-background-color: #2563EB;
+}
+
+/* Corner between scrollbars */
+.table-view .corner {
+    -fx-background-color: #0B1930;
+}

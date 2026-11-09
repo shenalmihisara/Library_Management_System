@@ -8,7 +8,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import model.LoginDTO;
+import scean.SceanManager;
 
 import java.io.IOException;
 
@@ -27,41 +30,21 @@ public class LoginPageController {
 
     @FXML
     void btnLoginOnAction(ActionEvent event) {
-        if (loginController.CheckUserNameAndPassword(txtUserName.getText(),txtPassword.getText())) {
-            Stage stage = new Stage();
-            stage.show();
 
-            Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            errorStage.close();
-            try {
-                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Home/Home_Page.fxml"))));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+        LoginDTO loginDTO = new LoginDTO();
+
+        loginDTO.setUserName(txtUserName.getText());
+        loginDTO.setPassword(txtPassword.getText());
+
+        if (loginController.CheckUserNameAndPassword(loginDTO)) {
+            SceanManager.switchPage("/view/Home/Home_Page.fxml");
         }else {
-            Stage stage = new Stage();
-            try {
-                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Login/Login_error_page.fxml"))));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            stage.show();
-            Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            errorStage.close();
+            SceanManager.switchPage("/view/Login/Login_error_page.fxml");
 
         }
     }
 
     public void btnClearOnAction(ActionEvent actionEvent) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Login/Login_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceanManager.switchPage("/view/Login/Login_page.fxml");
     }
 }

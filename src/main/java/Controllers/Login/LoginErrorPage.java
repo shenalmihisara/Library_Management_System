@@ -5,18 +5,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import scean.SceanManager;
 
 import java.io.IOException;
 
 public class LoginErrorPage {
     public void btnOkOnAction(ActionEvent actionEvent) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Login/Login_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
+        SceanManager.switchPage("/view/Login/Login_page.fxml");
 
         Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         errorStage.close();
