@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Map;
+
 public class BookDTO {
 
     private String  bookId;
@@ -7,6 +9,7 @@ public class BookDTO {
     private String bookAuthor;
     private String rate;
     private String bookTytpe;
+
 
     public String getBookId() {
         return bookId;

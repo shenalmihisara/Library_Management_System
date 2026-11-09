@@ -3,9 +3,9 @@ package Controllers.Books;
 import Controllers.Alert.AlertUtill;
 import DB.dbConnection;
 import javafx.scene.control.Alert;
+import model.IssueBookDTO;
 
 import java.sql.*;
-import java.time.LocalDate;
 
 public class IssueBooksController {
 
@@ -52,26 +52,24 @@ public class IssueBooksController {
         return null;
     }
 
-    public void issueBooks( String issuBookId, String member_id, String book_id, LocalDate issue_date, LocalDate due_date) {
+    public boolean issueBooks(IssueBookDTO issueBookDTO) {
         String SQL = "INSERT INTO issueBooks(issue_book_id, member_id, book_id, issue_date, due_date) VALUES (?, ?, ?, ?, ?)";
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
-            preparedStatement.setString(1, issuBookId);
-            preparedStatement.setString(2, member_id);
-            preparedStatement.setString(3, book_id);
-            preparedStatement.setDate(4, Date.valueOf(issue_date));
-            preparedStatement.setDate(5, Date.valueOf(due_date));
+            preparedStatement.setString(1, issueBookDTO.getBookId());
+            preparedStatement.setString(2, issueBookDTO.getMemberId());
+            preparedStatement.setString(3, issueBookDTO.getBookId());
+            preparedStatement.setDate(4, Date.valueOf(issueBookDTO.getIssueDate()));
+            preparedStatement.setDate(5, Date.valueOf(issueBookDTO.getDueDate()));
 
             preparedStatement.executeUpdate();
-
-            System.out.println("Sucess");
-            AlertUtill.showAlert(Alert.AlertType.INFORMATION, "Sucess", "Sucessfully Add Member");
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        return true;
     }
 
     public String genarateIssueBookId() {

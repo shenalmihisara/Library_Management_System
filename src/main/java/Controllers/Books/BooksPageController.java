@@ -107,21 +107,15 @@ public class BooksPageController implements Initializable {
         colBookAuthor.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("book_author", "")));
         colRate.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("rate","")));
         colBookCategory.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("book_type", "")));
+        tableBooks.getItems().setAll(bookController.getAllBooks());
 
 
-    }
-
-    public void loadBooks(){
-        ObservableList<Map<String, String>> bookFromDB = bookController.getAllBooks();
-        masterBookList.setAll(bookFromDB);
-        tableBooks.setItems(masterBookList);
     }
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initiableColumns();
-        loadBooks();
     }
 
     public void btnDeleteMemberOnAction(ActionEvent actionEvent) {

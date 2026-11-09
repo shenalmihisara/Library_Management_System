@@ -9,6 +9,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
+import model.BookDTO;
+import model.IssueBookDTO;
 import scean.SceanManager;
 
 import java.net.URL;
@@ -116,14 +118,26 @@ public class IssueBooksPageController implements Initializable {
 
     @FXML
     void btnIssueBookOnAction(ActionEvent event) {
-        issueBooksController.issueBooks(
-                issueBooksController.genarateIssueBookId(),
-                txtMemberId.getText(),
-                txtBookId.getText(),
-                dateIssue.getValue(),
-                dateDue.getValue()
 
-        );
+        IssueBookDTO issueBookDTO = new IssueBookDTO();
+
+        issueBookDTO.setIssuBookId(issueBooksController.genarateIssueBookId());
+        issueBookDTO.setMemberId(txtMemberId.getText());
+        issueBookDTO.setBookId(txtBookId.getText());
+        issueBookDTO.setIssueDate(dateIssue.getValue());
+        issueBookDTO.setDueDate(dateDue.getValue());
+
+        boolean IsAdded = issueBooksController.issueBooks(issueBookDTO);
+
+        if (IsAdded){
+            AlertUtill.showAlert(Alert.AlertType.INFORMATION,
+                    "Sucess",
+                    "Sucessfully isssue book");
+        } else {
+            AlertUtill.showAlert(Alert.AlertType.ERROR,
+                    "ERROR",
+                    "Faild To issue Book");
+        }
 
         txtMemberId.clear();
         txtBookId.clear();
