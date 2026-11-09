@@ -1,11 +1,14 @@
 package Controllers.Books;
 
+import Controllers.Alert.AlertUtill;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import model.ReturnBookDTO;
 import scean.SceanManager;
 
 import java.net.URL;
@@ -121,14 +124,27 @@ public class ReturnBooksPageController implements Initializable {
 
     @FXML
     void btnReturnBookOnAction(ActionEvent event) {
-        returnBookController.returnBooks(
-                txtReturnBookId.getText(),
-                txtBookId.getText(),
-                txtMemberId.getText(),
-                dateIssue.getValue(),
-                dateDue.getValue(),
-                dateReturn.getValue()
-        );
+
+        ReturnBookDTO returnBookDTO = new ReturnBookDTO();
+
+        returnBookDTO.setReturnBookId(txtReturnBookId.getText());
+        returnBookDTO.setBookId(txtBookId.getText());
+        returnBookDTO.setMemberId(txtMemberId.getText());
+        returnBookDTO.setIssueDate(dateIssue.getValue());
+        returnBookDTO.setDueDate(dateDue.getValue());
+        returnBookDTO.setReturnDate(String.valueOf(dateReturn.getValue()));
+
+        boolean IsAdded = returnBookController.returnBooks(returnBookDTO);
+
+        if (IsAdded){
+            AlertUtill.showAlert(Alert.AlertType.INFORMATION,
+                    "Sucess",
+                    "Sucessfully return book");
+        } else {
+            AlertUtill.showAlert(Alert.AlertType.ERROR,
+                    "Error",
+                    "Faild to return book");
+        }
 
         returnBookController.deleteIssueBook(txtIssueBookId);
 
@@ -148,8 +164,6 @@ public class ReturnBooksPageController implements Initializable {
         } else {
             System.out.println("return book id not found");
         }
-//        dateIssue.setValue(returnBookController.getDate(dateIssue.getId()));
-//        dateDue.setValue(returnBookController.getDate(dateDue.getId()));
     }
 
     @Override
